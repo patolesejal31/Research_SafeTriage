@@ -1,0 +1,1 @@
+"""SafeTriage application package."""

@@ -1,0 +1,518 @@
+# SafeTriage Clinical Synonym Lexicon
+# NOTICE: All Indian vernacular (Hinglish/Marathi-transliterated) mappings are explicitly
+# marked UNVERIFIED and require documented clinical review by a native-speaking clinician.
+# Fuzzy matching is restricted to single tokens >= 5 characters and is never used to downgrade.
+
+concepts:
+  chest_pain:
+    level_1_relevant: true
+    english_terms:
+      - "chest pain"
+      - "pain in chest"
+      - "chest pressure"
+      - "chest tightness"
+      - "crushing chest pain"
+      - "substernal pain"
+      - "angina"
+      - "heart pain"
+      - "heavy chest"
+      - "squeezing in chest"
+      - "heart attack"
+    vernacular_terms:
+      - term: "dil ka daura"
+        language: "hinglish"
+        review_status: "UNVERIFIED"
+        needs_review: true
+        notes: "Colloquial term for heart attack; requires urgent ACS rule evaluation"
+      - term: "chhaati mein dard"
+        language: "hinglish"
+        review_status: "UNVERIFIED"
+        needs_review: true
+      - term: "seene mein dard"
+        language: "hinglish"
+        review_status: "UNVERIFIED"
+        needs_review: true
+      - term: "chaati madhe dukhatahe"
+        language: "marathi_transliterated"
+        review_status: "UNVERIFIED"
+        needs_review: true
+      - term: "chhati dukhat ahe"
+        language: "marathi_transliterated"
+        review_status: "UNVERIFIED"
+        needs_review: true
+      - term: "chaati var dabav"
+        language: "marathi_transliterated"
+        review_status: "UNVERIFIED"
+        needs_review: true
+
+  breathlessness:
+    level_1_relevant: true
+    english_terms:
+      - "shortness of breath"
+      - "breathlessness"
+      - "difficulty breathing"
+      - "can't breathe"
+      - "cannot breathe"
+      - "gasping"
+      - "stridor"
+      - "wheezing"
+      - "dyspnea"
+      - "choking"
+      - "suffocation"
+    vernacular_terms:
+      - term: "saans phoolna"
+        language: "hinglish"
+        review_status: "UNVERIFIED"
+        needs_review: true
+      - term: "saans lene mein dikkat"
+        language: "hinglish"
+        review_status: "UNVERIFIED"
+        needs_review: true
+      - term: "saas nahi aa rahi"
+        language: "hinglish"
+        review_status: "UNVERIFIED"
+        needs_review: true
+      - term: "dum ghutna"
+        language: "hinglish"
+        review_status: "UNVERIFIED"
+        needs_review: true
+      - term: "shwas ghyayla tras"
+        language: "marathi_transliterated"
+        review_status: "UNVERIFIED"
+        needs_review: true
+      - term: "dham lagne"
+        language: "marathi_transliterated"
+        review_status: "UNVERIFIED"
+        needs_review: true
+      - term: "dham lagli"
+        language: "marathi_transliterated"
+        review_status: "UNVERIFIED"
+        needs_review: true
+
+  altered_mental_status:
+    level_1_relevant: true
+    english_terms:
+      - "unconscious"
+      - "unconsciousness"
+      - "unresponsive"
+      - "passed out"
+      - "loss of consciousness"
+      - "fainted"
+      - "syncope"
+      - "not responding"
+      - "confused"
+      - "confusion"
+      - "delirium"
+      - "stupor"
+    vernacular_terms:
+      - term: "behosh"
+        language: "hinglish"
+        review_status: "UNVERIFIED"
+        needs_review: true
+      - term: "behoshi"
+        language: "hinglish"
+        review_status: "UNVERIFIED"
+        needs_review: true
+      - term: "hosh kho gaya"
+        language: "hinglish"
+        review_status: "UNVERIFIED"
+        needs_review: true
+      - term: "shuddhi var nahi"
+        language: "marathi_transliterated"
+        review_status: "UNVERIFIED"
+        needs_review: true
+      - term: "bhan nahi"
+        language: "marathi_transliterated"
+        review_status: "UNVERIFIED"
+        needs_review: true
+
+  stroke_symptoms:
+    level_1_relevant: true
+    english_terms:
+      - "facial droop"
+      - "face drooping"
+      - "arm weakness"
+      - "arm drift"
+      - "slurred speech"
+      - "inability to speak"
+      - "sudden numbness"
+      - "one sided weakness"
+      - "hemiplegia"
+      - "stroke"
+    vernacular_terms:
+      - term: "lakwa"
+        language: "hinglish"
+        review_status: "UNVERIFIED"
+        needs_review: true
+      - term: "muh tedha"
+        language: "hinglish"
+        review_status: "UNVERIFIED"
+        needs_review: true
+      - term: "muh tedha hona"
+        language: "hinglish"
+        review_status: "UNVERIFIED"
+        needs_review: true
+      - term: "bolne mein dikkat"
+        language: "hinglish"
+        review_status: "UNVERIFIED"
+        needs_review: true
+      - term: "pakshaghat"
+        language: "marathi_transliterated"
+        review_status: "UNVERIFIED"
+        needs_review: true
+      - term: "ek baju kamjor"
+        language: "marathi_transliterated"
+        review_status: "UNVERIFIED"
+        needs_review: true
+
+  seizure:
+    level_1_relevant: true
+    english_terms:
+      - "seizure"
+      - "convulsion"
+      - "fits"
+      - "jerking"
+      - "epileptic seizure"
+    vernacular_terms:
+      - term: "daura"
+        language: "hinglish"
+        review_status: "UNVERIFIED"
+        needs_review: true
+      - term: "mirgi"
+        language: "hinglish"
+        review_status: "UNVERIFIED"
+        needs_review: true
+      - term: "zatke"
+        language: "marathi_transliterated"
+        review_status: "UNVERIFIED"
+        needs_review: true
+      - term: "aakshat"
+        language: "marathi_transliterated"
+        review_status: "UNVERIFIED"
+        needs_review: true
+
+  severe_bleeding:
+    level_1_relevant: true
+    english_terms:
+      - "heavy bleeding"
+      - "severe bleeding"
+      - "bleeding uncontrollably"
+      - "spurting blood"
+      - "hemorrhage"
+      - "coughing blood"
+      - "vomiting blood"
+    vernacular_terms:
+      - term: "bahut khoon behna"
+        language: "hinglish"
+        review_status: "UNVERIFIED"
+        needs_review: true
+      - term: "khoon ki ulti"
+        language: "hinglish"
+        review_status: "UNVERIFIED"
+        needs_review: true
+      - term: "khooni ulti"
+        language: "hinglish"
+        review_status: "UNVERIFIED"
+        needs_review: true
+      - term: "rakta pravaha"
+        language: "marathi_transliterated"
+        review_status: "UNVERIFIED"
+        needs_review: true
+      - term: "khup rakt yetoy"
+        language: "marathi_transliterated"
+        review_status: "UNVERIFIED"
+        needs_review: true
+
+  anaphylaxis:
+    level_1_relevant: true
+    english_terms:
+      - "anaphylaxis"
+      - "throat swelling"
+      - "tongue swelling"
+      - "lip swelling"
+      - "airway swelling"
+      - "severe allergic reaction"
+    vernacular_terms:
+      - term: "gala sooj gaya"
+        language: "hinglish"
+        review_status: "UNVERIFIED"
+        needs_review: true
+      - term: "jeebh sooj gayi"
+        language: "hinglish"
+        review_status: "UNVERIFIED"
+        needs_review: true
+      - term: "ghasa sujne"
+        language: "marathi_transliterated"
+        review_status: "UNVERIFIED"
+        needs_review: true
+
+  snakebite:
+    level_1_relevant: true
+    english_terms:
+      - "snake bite"
+      - "snakebite"
+      - "bitten by snake"
+    vernacular_terms:
+      - term: "saanp ne kata"
+        language: "hinglish"
+        review_status: "UNVERIFIED"
+        needs_review: true
+      - term: "saap chavla"
+        language: "marathi_transliterated"
+        review_status: "UNVERIFIED"
+        needs_review: true
+
+  headache:
+    level_1_relevant: false
+    english_terms:
+      - "headache"
+      - "head ache"
+      - "head pain"
+      - "migraine"
+      - "throbbing headache"
+      - "thunderclap headache"
+    vernacular_terms:
+      - term: "sir dard"
+        language: "hinglish"
+        review_status: "UNVERIFIED"
+        needs_review: true
+      - term: "sar dard"
+        language: "hinglish"
+        review_status: "UNVERIFIED"
+        needs_review: true
+      - term: "doke dukhi"
+        language: "marathi_transliterated"
+        review_status: "UNVERIFIED"
+        needs_review: true
+      - term: "doke dukhat ahe"
+        language: "marathi_transliterated"
+        review_status: "UNVERIFIED"
+        needs_review: true
+
+  fever:
+    level_1_relevant: false
+    english_terms:
+      - "fever"
+      - "high temperature"
+      - "pyrexia"
+      - "chills"
+      - "febrile"
+      - "shivering"
+    vernacular_terms:
+      - term: "bukhar"
+        language: "hinglish"
+        review_status: "UNVERIFIED"
+        needs_review: true
+      - term: "tez bukhar"
+        language: "hinglish"
+        review_status: "UNVERIFIED"
+        needs_review: true
+      - term: "taap"
+        language: "marathi_transliterated"
+        review_status: "UNVERIFIED"
+        needs_review: true
+      - term: "angar taplay"
+        language: "marathi_transliterated"
+        review_status: "UNVERIFIED"
+        needs_review: true
+
+  dizziness:
+    level_1_relevant: false
+    english_terms:
+      - "dizziness"
+      - "lightheadedness"
+      - "vertigo"
+      - "spinning"
+      - "feeling faint"
+    vernacular_terms:
+      - term: "chakkar"
+        language: "hinglish"
+        review_status: "UNVERIFIED"
+        needs_review: true
+      - term: "chakkar aana"
+        language: "hinglish"
+        review_status: "UNVERIFIED"
+        needs_review: true
+      - term: "chakkari"
+        language: "marathi_transliterated"
+        review_status: "UNVERIFIED"
+        needs_review: true
+
+  diarrhea:
+    level_1_relevant: false
+    english_terms:
+      - "diarrhea"
+      - "diarrhoea"
+      - "loose stools"
+      - "watery stools"
+      - "frequent bowel movements"
+    vernacular_terms:
+      - term: "loose motions"
+        language: "hinglish"
+        review_status: "UNVERIFIED"
+        needs_review: true
+      - term: "dast"
+        language: "hinglish"
+        review_status: "UNVERIFIED"
+        needs_review: true
+      - term: "julab"
+        language: "marathi_transliterated"
+        review_status: "UNVERIFIED"
+        needs_review: true
+      - term: "sandas patal"
+        language: "marathi_transliterated"
+        review_status: "UNVERIFIED"
+        needs_review: true
+
+  vomiting:
+    level_1_relevant: false
+    english_terms:
+      - "vomiting"
+      - "nausea"
+      - "throwing up"
+      - "emesis"
+      - "queasy"
+    vernacular_terms:
+      - term: "ulti"
+        language: "hinglish"
+        review_status: "UNVERIFIED"
+        needs_review: true
+      - term: "ulti aana"
+        language: "hinglish"
+        review_status: "UNVERIFIED"
+        needs_review: true
+      - term: "omiting"
+        language: "marathi_transliterated"
+        review_status: "UNVERIFIED"
+        needs_review: true
+      - term: "waanti"
+        language: "marathi_transliterated"
+        review_status: "UNVERIFIED"
+        needs_review: true
+
+  abdominal_pain:
+    level_1_relevant: false
+    english_terms:
+      - "abdominal pain"
+      - "stomach pain"
+      - "stomach ache"
+      - "belly pain"
+      - "gut pain"
+      - "cramps"
+    vernacular_terms:
+      - term: "pet dard"
+        language: "hinglish"
+        review_status: "UNVERIFIED"
+        needs_review: true
+      - term: "pet me dard"
+        language: "hinglish"
+        review_status: "UNVERIFIED"
+        needs_review: true
+      - term: "pet mein dard"
+        language: "hinglish"
+        review_status: "UNVERIFIED"
+        needs_review: true
+      - term: "pot dukhi"
+        language: "marathi_transliterated"
+        review_status: "UNVERIFIED"
+        needs_review: true
+      - term: "potat dukhatahe"
+        language: "marathi_transliterated"
+        review_status: "UNVERIFIED"
+        needs_review: true
+
+  cough:
+    level_1_relevant: false
+    english_terms:
+      - "cough"
+      - "dry cough"
+      - "productive cough"
+      - "coughing"
+      - "phlegm"
+    vernacular_terms:
+      - term: "khansi"
+        language: "hinglish"
+        review_status: "UNVERIFIED"
+        needs_review: true
+      - term: "khokla"
+        language: "marathi_transliterated"
+        review_status: "UNVERIFIED"
+        needs_review: true
+
+  dysuria:
+    level_1_relevant: false
+    english_terms:
+      - "dysuria"
+      - "burning urination"
+      - "painful urination"
+      - "urinary pain"
+      - "burning pee"
+    vernacular_terms:
+      - term: "peshab mein jalan"
+        language: "hinglish"
+        review_status: "UNVERIFIED"
+        needs_review: true
+      - term: "peshab me jalan"
+        language: "hinglish"
+        review_status: "UNVERIFIED"
+        needs_review: true
+      - term: "mutra visarjanat jallan"
+        language: "marathi_transliterated"
+        review_status: "UNVERIFIED"
+        needs_review: true
+
+  rash:
+    level_1_relevant: false
+    english_terms:
+      - "rash"
+      - "skin eruption"
+      - "hives"
+      - "itching"
+      - "urticaria"
+    vernacular_terms:
+      - term: "khujli"
+        language: "hinglish"
+        review_status: "UNVERIFIED"
+        needs_review: true
+      - term: "lal daane"
+        language: "hinglish"
+        review_status: "UNVERIFIED"
+        needs_review: true
+      - term: "khand"
+        language: "marathi_transliterated"
+        review_status: "UNVERIFIED"
+        needs_review: true
+
+  dvt_symptoms:
+    level_1_relevant: false
+    english_terms:
+      - "swollen leg"
+      - "leg swelling"
+      - "calf pain"
+      - "swollen calf"
+      - "deep vein thrombosis"
+      - "dvt"
+    vernacular_terms:
+      - term: "pair mein sujan"
+        language: "hinglish"
+        review_status: "UNVERIFIED"
+        needs_review: true
+      - term: "payat sujan"
+        language: "marathi_transliterated"
+        review_status: "UNVERIFIED"
+        needs_review: true
+
+# Ambiguous mappings that need explicit clinical flagging
+ambiguous_terms:
+  - term: "chakkar"
+    mapped_concept: "dizziness"
+    is_ambiguous: true
+    flag_reason: "Can mean non-specific lightheadedness, vertigo, or presyncope."
+  - term: "kamzori"
+    mapped_concept: "fatigue"
+    is_ambiguous: true
+    flag_reason: "Can represent systemic fatigue or focal neurological weakness."
+  - term: "ghabrahat"
+    mapped_concept: "anxiety_or_palpitations"
+    is_ambiguous: true
+    flag_reason: "Can represent psychological anxiety, tachycardia, or cardiac prodrome."

@@ -1,0 +1,53 @@
+# Allergy and Immune System Rules
+metadata:
+  specialty: "allergy_immune"
+  review_status: "UNVERIFIED"
+
+rules:
+  - id: "ALLG-001"
+    level: 1
+    name: "Anaphylaxis / Acute Upper Airway Angioedema"
+    conditions:
+      all_of:
+        - concept: "anaphylaxis"
+          status: "POSITIVE"
+    rationale: "Rapidly progressing swelling of the tongue, lips, pharynx, or airway compromises ventilation and represents a life-threatening hypersensitivity reaction."
+    recommended_action: "Call national emergency services (112 / 108) immediately. If an auto-injector has been prescribed for this condition, administer according to training."
+    timeframe: "Immediate (0-15 minutes) [suggested]"
+    source:
+      body: "World Allergy Organization (WAO)"
+      document_title: "World Allergy Organization Anaphylaxis Guidelines: 2020 Update"
+      year: 2020
+      section: "Section 4: Diagnosis and Emergency Management"
+      url: "TODO: verify exact WAO URL"
+      access_date: "2026-11-24"
+      verified: false
+    review_status: "UNVERIFIED"
+    reviewer_initials: null
+
+  - id: "ALLG-002"
+    level: 2
+    name: "Acute Widespread Urticaria / Rapid Allergic Eruption Without Airway Symptoms"
+    conditions:
+      all_of:
+        - concept: "rash"
+          status: "POSITIVE"
+        - onset: "sudden"
+      none_of:
+        - concept: "anaphylaxis"
+          status: "POSITIVE"
+        - concept: "breathlessness"
+          status: "POSITIVE"
+    rationale: "Rapidly spreading hives, wheals, or cutaneous allergic reactions without respiratory compromise require prompt urgent evaluation to monitor for systemic progression."
+    recommended_action: "Visit an urgent care clinic or outpatient medical center today for evaluation."
+    timeframe: "Within 2-4 hours [suggested]"
+    source:
+      body: "British Society for Allergy and Clinical Immunology (BSACI)"
+      document_title: "BSACI guideline for the management of chronic urticaria and angio-oedema"
+      year: 2018
+      section: "Section 3: Acute Presentation Assessment"
+      url: "TODO: verify exact BSACI URL"
+      access_date: "2026-11-24"
+      verified: false
+    review_status: "UNVERIFIED"
+    reviewer_initials: null

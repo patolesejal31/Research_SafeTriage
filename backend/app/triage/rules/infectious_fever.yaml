@@ -1,0 +1,86 @@
+# Infectious Disease and Fever Rules
+metadata:
+  specialty: "infectious_fever"
+  review_status: "UNVERIFIED"
+
+rules:
+  - id: "INFN-001"
+    level: 1
+    name: "Suspected Sepsis / Severe Febrile Encephalopathy"
+    conditions:
+      all_of:
+        - concept: "fever"
+          status: "POSITIVE"
+      any_of:
+        - concept: "altered_mental_status"
+          status: "POSITIVE"
+        - severity: "severe"
+    rationale: "Fever combined with altered mental status, confusion, extreme lethargy, or severe systemic toxicity signals possible life-threatening septic shock or intracranial infection."
+    recommended_action: "Call national emergency services (112 / 108) immediately for emergency medical transport and intravenous stabilization."
+    timeframe: "Immediate (0-15 minutes) [suggested]"
+    source:
+      body: "Surviving Sepsis Campaign (SSC) / SCCM"
+      document_title: "Surviving Sepsis Campaign: International Guidelines for Management of Sepsis and Septic Shock 2021"
+      year: 2021
+      section: "Screening and Early Identification"
+      url: "TODO: verify exact Sepsis URL"
+      access_date: "2026-11-24"
+      verified: false
+    review_status: "UNVERIFIED"
+    reviewer_initials: null
+
+  - id: "INFN-002"
+    level: 2
+    name: "Suspected Dengue With Clinical Warning Signs"
+    conditions:
+      all_of:
+        - concept: "fever"
+          status: "POSITIVE"
+        - concept: "abdominal_pain"
+          status: "POSITIVE"
+      none_of:
+        - concept: "altered_mental_status"
+          status: "POSITIVE"
+    rationale: "Fever coinciding with severe persistent abdominal pain in endemic settings raises high suspicion for Dengue with warning signs (plasma leakage / impending shock)."
+    recommended_action: "Go promptly to a hospital emergency or acute observation ward for hematocrit and platelet count monitoring."
+    timeframe: "Within 2-4 hours [suggested]"
+    source:
+      body: "World Health Organization (WHO) / NVBDCP India"
+      document_title: "Dengue: Guidelines for Diagnosis, Treatment, Prevention and Control"
+      year: 2009
+      section: "Chapter 2: Clinical Management and Warning Signs"
+      url: "TODO: verify exact WHO Dengue URL"
+      access_date: "2026-11-24"
+      verified: false
+    review_status: "UNVERIFIED"
+    reviewer_initials: null
+
+  - id: "INFN-003"
+    level: 3
+    name: "Uncomplicated Acute Febrile Presentation"
+    conditions:
+      all_of:
+        - concept: "fever"
+          status: "POSITIVE"
+      none_of:
+        - concept: "altered_mental_status"
+          status: "POSITIVE"
+        - concept: "breathlessness"
+          status: "POSITIVE"
+        - concept: "abdominal_pain"
+          status: "POSITIVE"
+        - age_band: "neonate"
+        - age_band: "young_infant"
+    rationale: "Short-duration fever in an alert individual without dyspnea, focal red flags, or hemodynamic compromise can be evaluated in routine outpatient practice."
+    recommended_action: "Stay hydrated and rest. Consult a primary care practitioner or community clinic for routine evaluation."
+    timeframe: "Within 24-48 hours [suggested]"
+    source:
+      body: "Infectious Diseases Society of America (IDSA)"
+      document_title: "Clinical Practice Guideline for the Evaluation of Fever and Infection in Outpatients"
+      year: 2020
+      section: "Section 2: Ambulatory Fever Evaluation"
+      url: "TODO: verify exact IDSA URL"
+      access_date: "2026-11-24"
+      verified: false
+    review_status: "UNVERIFIED"
+    reviewer_initials: null

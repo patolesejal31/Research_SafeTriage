@@ -1,0 +1,70 @@
+# Environmental and Trauma Rules
+metadata:
+  specialty: "environmental_trauma"
+  review_status: "UNVERIFIED"
+
+rules:
+  - id: "TRAU-001"
+    level: 1
+    name: "Snakebite / Suspected Venomous Envenomation"
+    conditions:
+      all_of:
+        - concept: "snakebite"
+          status: "POSITIVE"
+    rationale: "Potential venomous snakebite risks neuromuscular paralysis, coagulopathy, tissue necrosis, and acute kidney injury requiring immediate anti-snake venom (ASV)."
+    recommended_action: "Call emergency services (112 / 108) immediately. Immobilize the bitten limb at heart level. Do not cut, suck, or apply tourniquet."
+    timeframe: "Immediate (0-15 minutes) [suggested]"
+    source:
+      body: "World Health Organization (WHO)"
+      document_title: "Guidelines for the management of snakebites (2nd edition)"
+      year: 2016
+      section: "Section 6: Emergency Treatment and First Aid"
+      url: "TODO: verify exact WHO Snakebite URL"
+      access_date: "2026-11-24"
+      verified: false
+    review_status: "UNVERIFIED"
+    reviewer_initials: null
+
+  - id: "TRAU-002"
+    level: 1
+    name: "Severe Exsanguinating External or Internal Bleeding"
+    conditions:
+      all_of:
+        - concept: "severe_bleeding"
+          status: "POSITIVE"
+    rationale: "Arterial or severe venous bleeding, hematemesis, or massive hemoptysis causes rapid hypovolemic shock and cardiac arrest."
+    recommended_action: "Call national emergency services (112 / 108). Apply continuous firm direct pressure with a clean cloth or tourniquet if trained."
+    timeframe: "Immediate (0-15 minutes) [suggested]"
+    source:
+      body: "American College of Surgeons (ACS) / Stop the Bleed"
+      document_title: "Bleeding Control Basic (BCon) Course v. 2.0"
+      year: 2020
+      section: "Life-Threatening Bleeding Recognition"
+      url: "TODO: verify exact Stop the Bleed URL"
+      access_date: "2026-11-24"
+      verified: false
+    review_status: "UNVERIFIED"
+    reviewer_initials: null
+
+  - id: "TRAU-003"
+    level: 1
+    name: "Heat Stroke / Severe Environmental Hyperthermia"
+    conditions:
+      all_of:
+        - concept: "fever"
+          status: "POSITIVE"
+        - concept: "altered_mental_status"
+          status: "POSITIVE"
+    rationale: "Elevated body temperature combined with central nervous system dysfunction (confusion, lethargy, coma) following heat exposure constitutes heat stroke."
+    recommended_action: "Call emergency services (112 / 108). Move person to shade, spray with cool water, and apply ice packs to neck, axillae, and groin."
+    timeframe: "Immediate (0-15 minutes) [suggested]"
+    source:
+      body: "Wilderness Medical Society (WMS)"
+      document_title: "Wilderness Medical Society Clinical Practice Guidelines for the Prevention and Treatment of Heat Illness: 2019 Update"
+      year: 2019
+      section: "Table 1: Classification and Field Management of Heat Stroke"
+      url: "TODO: verify exact WMS Heat Stroke URL"
+      access_date: "2026-11-24"
+      verified: false
+    review_status: "UNVERIFIED"
+    reviewer_initials: null

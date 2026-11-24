@@ -1,0 +1,57 @@
+# Genitourinary and Vascular Rules
+metadata:
+  specialty: "genitourinary"
+  review_status: "UNVERIFIED"
+
+rules:
+  - id: "GENU-001"
+    level: 2
+    name: "Suspected Deep Vein Thrombosis (DVT) / Acute Unilateral Limb Pain"
+    conditions:
+      all_of:
+        - concept: "dvt_symptoms"
+          status: "POSITIVE"
+      none_of:
+        - concept: "breathlessness"
+          status: "POSITIVE"
+        - concept: "chest_pain"
+          status: "POSITIVE"
+    rationale: "Acute unilateral leg swelling, calf tenderness, and erythema carry high risk of pulmonary embolism if untreated."
+    recommended_action: "Visit an acute hospital evaluation unit or urgent diagnostic center within 2-4 hours for D-dimer and compression ultrasonography."
+    timeframe: "Within 2-4 hours [suggested]"
+    source:
+      body: "National Institute for Health and Care Excellence (NICE)"
+      document_title: "Venous thromboembolic diseases: diagnosis, management and thrombophilia testing (NG158)"
+      year: 2020
+      section: "1.2 Diagnostic investigation of suspected DVT (Wells score)"
+      url: "TODO: verify exact NICE NG158 URL"
+      access_date: "2026-11-24"
+      verified: false
+    review_status: "UNVERIFIED"
+    reviewer_initials: null
+
+  - id: "GENU-002"
+    level: 3
+    name: "Uncomplicated Lower Urinary Tract Infection / Dysuria"
+    conditions:
+      all_of:
+        - concept: "dysuria"
+          status: "POSITIVE"
+      none_of:
+        - concept: "fever"
+          status: "POSITIVE"
+        - concept: "abdominal_pain"
+          status: "POSITIVE"
+    rationale: "Burning or painful urination in an afebrile individual without flank pain or nausea represents uncomplicated cystitis suitable for primary care management."
+    recommended_action: "Consult a primary care clinician or community health center for urinalysis and targeted outpatient treatment."
+    timeframe: "Within 24-48 hours [suggested]"
+    source:
+      body: "European Association of Urology (EAU)"
+      document_title: "EAU Guidelines on Urological Infections"
+      year: 2022
+      section: "Section 3.1: Uncomplicated Cystitis in Adults"
+      url: "TODO: verify exact EAU UTI URL"
+      access_date: "2026-11-24"
+      verified: false
+    review_status: "UNVERIFIED"
+    reviewer_initials: null

@@ -1,0 +1,123 @@
+# Neurological Rules
+metadata:
+  specialty: "neuro"
+  review_status: "UNVERIFIED"
+
+rules:
+  - id: "NEUR-001"
+    level: 1
+    name: "Acute Stroke / FAST Signs"
+    conditions:
+      all_of:
+        - concept: "stroke_symptoms"
+          status: "POSITIVE"
+    rationale: "Focal neurological deficit such as facial drooping, arm weakness, speech difficulty, or hemiplegia suggests acute cerebrovascular ischemia or hemorrhage."
+    recommended_action: "Call national emergency services (112 / 108) immediately. Record exact time of symptom onset for thrombolytic window."
+    timeframe: "Immediate (0-15 minutes) [suggested]"
+    source:
+      body: "American Heart Association / American Stroke Association (AHA/ASA)"
+      document_title: "2019 Update to the 2018 Guidelines for the Early Management of Patients With Acute Ischemic Stroke"
+      year: 2019
+      section: "Section 1.1: Prehospital Systems of Care"
+      url: "TODO: verify exact stroke URL"
+      access_date: "2026-11-24"
+      verified: false
+    review_status: "UNVERIFIED"
+    reviewer_initials: null
+
+  - id: "NEUR-002"
+    level: 1
+    name: "Thunderclap Headache / Suspected Subarachnoid Hemorrhage"
+    conditions:
+      all_of:
+        - concept: "headache"
+          status: "POSITIVE"
+      any_of:
+        - modifier: "worst_ever"
+        - onset: "sudden"
+    rationale: "Sudden onset 'worst headache of life' peaking within seconds to minutes warrants immediate emergency neuroimaging to rule out subarachnoid hemorrhage."
+    recommended_action: "Go directly to the nearest emergency department or call emergency ambulance (112 / 108)."
+    timeframe: "Immediate (0-15 minutes) [suggested]"
+    source:
+      body: "American Academy of Neurology (AAN)"
+      document_title: "Evidence-based guideline: Evaluation of adults with acute headache in the emergency department"
+      year: 2019
+      section: "SNOOP Criteria for Secondary Headaches"
+      url: "TODO: verify exact AAN URL"
+      access_date: "2026-11-24"
+      verified: false
+    review_status: "UNVERIFIED"
+    reviewer_initials: null
+
+  - id: "NEUR-003"
+    level: 1
+    name: "Active or Recurrent Seizure / Status Epilepticus"
+    conditions:
+      all_of:
+        - concept: "seizure"
+          status: "POSITIVE"
+    rationale: "Active convulsions, prolonged seizures (>5 min), or clustering seizures risk hypoxic brain injury and status epilepticus."
+    recommended_action: "Call emergency services (112 / 108). Clear surroundings, place patient on side in recovery position, do not put objects in mouth."
+    timeframe: "Immediate (0-15 minutes) [suggested]"
+    source:
+      body: "National Institute for Health and Care Excellence (NICE)"
+      document_title: "Epilepsies in children, young people and adults (NG217)"
+      year: 2022
+      section: "1.10 Management of status epilepticus and emergency presentations"
+      url: "TODO: verify exact NICE NG217 URL"
+      access_date: "2026-11-24"
+      verified: false
+    review_status: "UNVERIFIED"
+    reviewer_initials: null
+
+  - id: "NEUR-004"
+    level: 2
+    name: "Acute Confusion / Altered Sensorium Without Airway Compromise"
+    conditions:
+      all_of:
+        - concept: "altered_mental_status"
+          status: "POSITIVE"
+      none_of:
+        - concept: "breathlessness"
+          status: "POSITIVE"
+    rationale: "Acute confusion, delirium, or persistent drowsiness requires urgent medical assessment for metabolic, toxic, or neurological causes."
+    recommended_action: "Seek urgent medical evaluation at a hospital emergency or urgent care department within 2 hours."
+    timeframe: "Within 1-2 hours [suggested]"
+    source:
+      body: "NICE"
+      document_title: "Delirium: prevention, diagnosis and management (CG103)"
+      year: 2019
+      section: "1.2 Recognition and assessment"
+      url: "TODO: verify exact NICE CG103 URL"
+      access_date: "2026-11-24"
+      verified: false
+    review_status: "UNVERIFIED"
+    reviewer_initials: null
+
+  - id: "NEUR-005"
+    level: 3
+    name: "Typical Migraine Without Red Flag Neurological Features"
+    conditions:
+      all_of:
+        - concept: "headache"
+          status: "POSITIVE"
+      none_of:
+        - modifier: "worst_ever"
+        - onset: "sudden"
+        - concept: "stroke_symptoms"
+          status: "POSITIVE"
+        - concept: "fever"
+          status: "POSITIVE"
+    rationale: "Recurrent or typical unilateral throbbing headache without neck stiffness, fever, or sudden onset can be managed in routine care."
+    recommended_action: "Rest in a quiet, dark room. Consult your physician or primary care clinic for routine migraine care."
+    timeframe: "Within 24-48 hours [suggested]"
+    source:
+      body: "International Headache Society (IHS)"
+      document_title: "The International Classification of Headache Disorders 3rd edition (ICHD-3)"
+      year: 2018
+      section: "1.1 Migraine without aura"
+      url: "TODO: verify exact ICHD-3 URL"
+      access_date: "2026-11-24"
+      verified: false
+    review_status: "UNVERIFIED"
+    reviewer_initials: null

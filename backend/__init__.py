@@ -1,0 +1,1 @@
+"""SafeTriage backend root package."""

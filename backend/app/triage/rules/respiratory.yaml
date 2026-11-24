@@ -1,0 +1,83 @@
+# Respiratory Rules
+metadata:
+  specialty: "respiratory"
+  review_status: "UNVERIFIED"
+
+rules:
+  - id: "RESP-001"
+    level: 1
+    name: "Severe Respiratory Distress / Impending Respiratory Failure"
+    conditions:
+      all_of:
+        - concept: "breathlessness"
+          status: "POSITIVE"
+      any_of:
+        - severity: "severe"
+        - modifier: "breathless"
+        - matched_term: "can't breathe"
+        - matched_term: "cannot breathe"
+        - matched_term: "gasping"
+        - matched_term: "stridor"
+    rationale: "Severe breathlessness, inability to speak full sentences, or gasping indicates imminent respiratory compromise requiring emergency oxygenation and ventilatory support."
+    recommended_action: "Call national emergency services (112 / 108) immediately. Keep patient sitting upright."
+    timeframe: "Immediate (0-15 minutes) [suggested]"
+    source:
+      body: "British Thoracic Society / Scottish Intercollegiate Guidelines Network (BTS/SIGN)"
+      document_title: "British guideline on the management of asthma (SIGN 158)"
+      year: 2019
+      section: "Section 9: Acute asthma high-risk features"
+      url: "TODO: verify exact BTS/SIGN URL"
+      access_date: "2026-11-24"
+      verified: false
+    review_status: "UNVERIFIED"
+    reviewer_initials: null
+
+  - id: "RESP-002"
+    level: 2
+    name: "Moderate Asthma Exacerbation / Acute Wheeze"
+    conditions:
+      all_of:
+        - concept: "breathlessness"
+          status: "POSITIVE"
+      none_of:
+        - severity: "severe"
+        - modifier: "breathless"
+    rationale: "Acute exacerbation of breathlessness or wheeze without immediate respiratory collapse requires urgent outpatient or emergency assessment within 2-4 hours."
+    recommended_action: "Seek urgent medical consultation at an acute care clinic or emergency facility today."
+    timeframe: "Within 2-4 hours [suggested]"
+    source:
+      body: "Global Initiative for Asthma (GINA)"
+      document_title: "Global Strategy for Asthma Management and Prevention"
+      year: 2022
+      section: "Box 4-3: Management of asthma exacerbations in primary care"
+      url: "TODO: verify exact GINA URL"
+      access_date: "2026-11-24"
+      verified: false
+    review_status: "UNVERIFIED"
+    reviewer_initials: null
+
+  - id: "RESP-003"
+    level: 3
+    name: "Subacute Persistent Cough Without Red Flags"
+    conditions:
+      all_of:
+        - concept: "cough"
+          status: "POSITIVE"
+      none_of:
+        - concept: "breathlessness"
+          status: "POSITIVE"
+        - concept: "severe_bleeding"
+          status: "POSITIVE"
+    rationale: "Cough without breathlessness, hemoptysis, or chest pain is suitable for routine primary care evaluation to assess post-infectious or allergic etiology."
+    recommended_action: "Schedule an appointment with a primary care clinician for routine evaluation and hydration advice."
+    timeframe: "Within 24-48 hours [suggested]"
+    source:
+      body: "American College of Chest Physicians (CHEST)"
+      document_title: "Classification of Cough as a Symptom in Adults and Management Algorithms"
+      year: 2018
+      section: "Subacute Cough Guidelines"
+      url: "TODO: verify exact CHEST URL"
+      access_date: "2026-11-24"
+      verified: false
+    review_status: "UNVERIFIED"
+    reviewer_initials: null

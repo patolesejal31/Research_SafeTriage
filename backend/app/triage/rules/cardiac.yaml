@@ -1,0 +1,82 @@
+# Cardiac Rules
+metadata:
+  specialty: "cardiac"
+  review_status: "UNVERIFIED"
+
+rules:
+  - id: "CARD-001"
+    level: 1
+    name: "Acute Coronary Syndrome (ACS) / High-Risk Chest Pain"
+    conditions:
+      all_of:
+        - concept: "chest_pain"
+          status: "POSITIVE"
+      any_of:
+        - modifier: "crushing"
+        - modifier: "radiating"
+        - severity: "severe"
+        - matched_term: "dil ka daura"
+    rationale: "Chest discomfort with crushing character, radiation to the arm/jaw, severe intensity, or vernacular heart attack description suggests acute myocardial ischemia."
+    recommended_action: "Call national emergency services (112 / 108) immediately for emergency resuscitation and ambulance transfer. Rest in a seated position."
+    timeframe: "Immediate (0-15 minutes) [suggested]"
+    source:
+      body: "American Heart Association / American College of Cardiology (AHA/ACC)"
+      document_title: "2021 AHA/ACC/ASE/CHEST/SAEM/SCCT/SCMR Guideline for the Evaluation and Diagnosis of Chest Pain"
+      year: 2021
+      section: "Section 3.1: High-Risk Features of Chest Pain"
+      url: "TODO: verify exact AHA URL"
+      access_date: "2026-11-24"
+      verified: false
+    review_status: "UNVERIFIED"
+    reviewer_initials: null
+
+  - id: "CARD-002"
+    level: 2
+    name: "Acute Unexplained Chest Discomfort in Older Adult"
+    conditions:
+      all_of:
+        - concept: "chest_pain"
+          status: "POSITIVE"
+        - age_band: "older_adult"
+      none_of:
+        - modifier: "crushing"
+        - severity: "severe"
+    rationale: "Atypical or non-severe chest discomfort in an older adult (>=65) warrants urgent evaluation to rule out acute cardiovascular pathology."
+    recommended_action: "Proceed to an urgent care center or emergency department promptly for clinical evaluation and ECG."
+    timeframe: "Within 1-2 hours [suggested]"
+    source:
+      body: "American Heart Association (AHA)"
+      document_title: "Atypical Presentation of Acute Coronary Syndromes in Older Adults"
+      year: 2020
+      section: "Clinical Practice Statement"
+      url: "TODO: verify exact AHA older adult URL"
+      access_date: "2026-11-24"
+      verified: false
+    review_status: "UNVERIFIED"
+    reviewer_initials: null
+
+  - id: "CARD-003"
+    level: 3
+    name: "Non-Acute Chest Discomfort / Mild Palpitations"
+    conditions:
+      all_of:
+        - concept: "chest_pain"
+          status: "POSITIVE"
+        - severity: "mild"
+      none_of:
+        - modifier: "crushing"
+        - modifier: "radiating"
+        - age_band: "older_adult"
+    rationale: "Mild chest discomfort in younger adults without radiation, crushing sensation, or shortness of breath requires non-urgent primary care assessment."
+    recommended_action: "Schedule an outpatient clinical appointment with a primary care clinician."
+    timeframe: "Within 24-48 hours [suggested]"
+    source:
+      body: "National Institute for Health and Care Excellence (NICE)"
+      document_title: "Recent-onset chest pain of suspected cardiac origin: assessment (CG95)"
+      year: 2016
+      section: "1.2 Low-risk outpatient assessment"
+      url: "TODO: verify exact NICE CG95 URL"
+      access_date: "2026-11-24"
+      verified: false
+    review_status: "UNVERIFIED"
+    reviewer_initials: null

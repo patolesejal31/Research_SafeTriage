@@ -1,0 +1,17 @@
+[
+  {
+    "case_id": "IND_CARD_001",
+    "tier": "independent_vignettes",
+    "clinical_vignette": "62-year-old male with acute onset of severe retrosternal squeezing chest pain for 45 minutes, diaphoresis, and radiation to the left arm.",
+    "specialty": "cardiac",
+    "ground_truth_urgency": 1,
+    "gold_rationale": "Classic ACS presentation with high-risk red-flag features (radiation, diaphoresis) requires immediate emergency medical services transfer (ESI 1 / MTS Red).",
+    "assigned_by": "TEMPLATE_SPECIFICATION",
+    "clinician_reviewed": false,
+    "demographics": {
+      "age_years": 62.0,
+      "age_months": null,
+      "sex": "male"
+    }
+  }
+]

@@ -1,0 +1,95 @@
+# General Self-Care Rules
+metadata:
+  specialty: "general_self_care"
+  review_status: "UNVERIFIED"
+
+rules:
+  - id: "SELF-001"
+    level: 4
+    name: "Mild Common Cold / Self-Limiting Upper Respiratory Infection"
+    conditions:
+      all_of:
+        - concept: "cough"
+          status: "POSITIVE"
+        - severity: "mild"
+      none_of:
+        - concept: "fever"
+          status: "POSITIVE"
+        - concept: "breathlessness"
+          status: "POSITIVE"
+        - concept: "chest_pain"
+          status: "POSITIVE"
+        - concept: "severe_bleeding"
+          status: "POSITIVE"
+        - age_band: "neonate"
+        - age_band: "young_infant"
+    rationale: "Mild cough and minor viral coryzal symptoms in an afebrile individual without respiratory distress are self-limiting."
+    recommended_action: "Supportive self-care: maintain fluid intake, warm steam inhalation, rest, and monitor for any new fever or breathlessness."
+    timeframe: "3-7 days self-limiting [suggested]"
+    source:
+      body: "Centers for Disease Control and Prevention (CDC)"
+      document_title: "Common Colds: Protect Yourself and Others"
+      year: 2021
+      section: "Self-care and when to seek medical attention"
+      url: "TODO: verify exact CDC Cold URL"
+      access_date: "2026-11-24"
+      verified: false
+    review_status: "UNVERIFIED"
+    reviewer_initials: null
+
+  - id: "SELF-002"
+    level: 4
+    name: "Minor Localized Itching / Self-Care Rash"
+    conditions:
+      all_of:
+        - concept: "rash"
+          status: "POSITIVE"
+        - severity: "mild"
+      none_of:
+        - concept: "anaphylaxis"
+          status: "POSITIVE"
+        - concept: "fever"
+          status: "POSITIVE"
+        - onset: "sudden"
+    rationale: "Mild localized itching or minor rash without systemic features, mucosal involvement, or sudden onset is suitable for home observation."
+    recommended_action: "Avoid scratching, apply cool compresses or bland moisturizer, and seek clinical advice if the rash spreads or develops pustules."
+    timeframe: "3-5 days self-limiting [suggested]"
+    source:
+      body: "British Association of Dermatologists (BAD)"
+      document_title: "Patient Information: Itch (Pruritus) and Minor Eruptions"
+      year: 2020
+      section: "Home management guidelines"
+      url: "TODO: verify exact BAD URL"
+      access_date: "2026-11-24"
+      verified: false
+    review_status: "UNVERIFIED"
+    reviewer_initials: null
+
+  - id: "SELF-003"
+    level: 4
+    name: "Mild Tension-Type Headache"
+    conditions:
+      all_of:
+        - concept: "headache"
+          status: "POSITIVE"
+        - severity: "mild"
+      none_of:
+        - onset: "sudden"
+        - modifier: "worst_ever"
+        - concept: "fever"
+          status: "POSITIVE"
+        - concept: "stroke_symptoms"
+          status: "POSITIVE"
+    rationale: "Mild diffuse headache without acute onset, visual disturbances, or neurological signs is characteristic of episodic tension headache."
+    recommended_action: "Rest, ensure adequate hydration, reduce screen time, and monitor symptoms."
+    timeframe: "24-48 hours self-limiting [suggested]"
+    source:
+      body: "International Headache Society (IHS)"
+      document_title: "The International Classification of Headache Disorders 3rd edition (ICHD-3)"
+      year: 2018
+      section: "2.1 Episodic tension-type headache"
+      url: "TODO: verify exact ICHD-3 Tension URL"
+      access_date: "2026-11-24"
+      verified: false
+    review_status: "UNVERIFIED"
+    reviewer_initials: null

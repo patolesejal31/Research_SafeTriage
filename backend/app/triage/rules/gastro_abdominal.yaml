@@ -1,0 +1,85 @@
+# Gastrointestinal and Abdominal Rules
+metadata:
+  specialty: "gastro_abdominal"
+  review_status: "UNVERIFIED"
+
+rules:
+  - id: "GAST-001"
+    level: 1
+    name: "Acute Abdomen / Peritonitis / Severe Gastrointestinal Crisis"
+    conditions:
+      all_of:
+        - concept: "abdominal_pain"
+          status: "POSITIVE"
+      any_of:
+        - severity: "severe"
+        - onset: "sudden"
+        - concept: "severe_bleeding"
+          status: "POSITIVE"
+    rationale: "Sudden or severe abdominal pain, particularly when combined with hematemesis or peritonism, indicates potential visceral perforation, obstruction, or acute hemorrhage."
+    recommended_action: "Call national emergency services (112 / 108) or go immediately to the nearest hospital emergency department. Do not eat or drink."
+    timeframe: "Immediate (0-15 minutes) [suggested]"
+    source:
+      body: "World Society of Emergency Surgery (WSES)"
+      document_title: "WSES Guidelines for the management of acute abdomen and secondary peritonitis"
+      year: 2020
+      section: "Section 2: Emergency Triage and Diagnostics"
+      url: "TODO: verify exact WSES URL"
+      access_date: "2026-11-24"
+      verified: false
+    review_status: "UNVERIFIED"
+    reviewer_initials: null
+
+  - id: "GAST-002"
+    level: 2
+    name: "Significant Dehydration Secondary to Acute Vomiting and Diarrhea"
+    conditions:
+      all_of:
+        - concept: "diarrhea"
+          status: "POSITIVE"
+        - concept: "vomiting"
+          status: "POSITIVE"
+      none_of:
+        - concept: "severe_bleeding"
+          status: "POSITIVE"
+        - severity: "severe"
+    rationale: "Concurrent persistent vomiting and watery diarrhea impair oral fluid retention and carry high risk of hypovolemia and electrolyte derangement."
+    recommended_action: "Visit an urgent care clinic or outpatient hospital emergency center for clinical hydration assessment."
+    timeframe: "Within 2-4 hours [suggested]"
+    source:
+      body: "World Health Organization (WHO)"
+      document_title: "The Treatment of Diarrhoea: A manual for physicians and other senior health workers (4th rev.)"
+      year: 2019
+      section: "Chapter 3: Assessment of Dehydration"
+      url: "TODO: verify exact WHO Diarrhea URL"
+      access_date: "2026-11-24"
+      verified: false
+    review_status: "UNVERIFIED"
+    reviewer_initials: null
+
+  - id: "GAST-003"
+    level: 3
+    name: "Uncomplicated Acute Diarrhea / Mild Gastroenteritis"
+    conditions:
+      all_of:
+        - concept: "diarrhea"
+          status: "POSITIVE"
+      none_of:
+        - concept: "vomiting"
+          status: "POSITIVE"
+        - concept: "severe_bleeding"
+          status: "POSITIVE"
+        - severity: "severe"
+    rationale: "Loose watery stools without vomiting, bloody stool, or severe pain can be monitored with oral rehydration solution under routine primary care guidance."
+    recommended_action: "Sip oral rehydration salts (ORS) frequently. Consult a primary care clinic if symptoms persist beyond 48 hours."
+    timeframe: "Within 24-48 hours [suggested]"
+    source:
+      body: "National Institute for Health and Care Excellence (NICE)"
+      document_title: "Diarrhoea and vomiting caused by gastroenteritis in children and adults (CG84)"
+      year: 2018
+      section: "1.1 Clinical assessment and home care"
+      url: "TODO: verify exact NICE CG84 URL"
+      access_date: "2026-11-24"
+      verified: false
+    review_status: "UNVERIFIED"
+    reviewer_initials: null

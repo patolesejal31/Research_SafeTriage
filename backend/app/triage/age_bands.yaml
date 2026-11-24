@@ -1,0 +1,121 @@
+# SafeTriage Clinical Age Bands Definition
+# Shared pediatric and adult age stratification based on clinical practice guidelines.
+# Boundary definitions are sourced from NICE Guideline NG143 ("Fever in under 5s")
+# and Indian Academy of Pediatrics (IAP) clinical triage standards.
+# All boundaries are marked UNVERIFIED pending formal clinician sign-off.
+
+metadata:
+  review_status: "UNVERIFIED"
+  verified: false
+  todo_notes: "TODO: confirm exact boundary inclusiveness with pediatric emergency clinical panel"
+
+bands:
+  neonate:
+    min_months: 0.0
+    max_months: 0.93  # ~28 days (0 to <28 days)
+    description: "Neonate (0 to <28 days); extreme high vulnerability for invasive bacterial infection"
+    source:
+      body: "National Institute for Health and Care Excellence (NICE)"
+      document_title: "Fever in under 5s: assessment and initial management (NG143)"
+      year: 2019
+      section: "1.2 Red flag risk criteria"
+      verified: false
+
+  young_infant:
+    min_months: 0.93  # 28 days
+    max_months: 3.0   # <3 months (e.g. 28 days to <3 months)
+    description: "Young infant (28 days to <3 months); high risk red-flag cutoff for fever >= 38.0°C"
+    source:
+      body: "National Institute for Health and Care Excellence (NICE)"
+      document_title: "Fever in under 5s: assessment and initial management (NG143)"
+      year: 2019
+      section: "1.2.2 High risk category (<3 months)"
+      verified: false
+
+  older_infant:
+    min_months: 3.0
+    max_months: 6.0   # 3 months to <6 months
+    description: "Older infant (3 to <6 months); intermediate risk amber-flag cutoff for fever >= 39.0°C"
+    source:
+      body: "National Institute for Health and Care Excellence (NICE)"
+      document_title: "Fever in under 5s: assessment and initial management (NG143)"
+      year: 2019
+      section: "1.2.3 Intermediate risk category (3-6 months)"
+      verified: false
+
+  toddler:
+    min_months: 6.0
+    max_months: 24.0  # 6 months to <2 years
+    description: "Toddler (6 months to <2 years)"
+    source:
+      body: "World Health Organization (WHO) / IAP"
+      document_title: "Pocket Book of Hospital Care for Children"
+      year: 2013
+      section: "Chapter 2: Diagnostic approach to the sick child"
+      verified: false
+
+  preschool_child:
+    min_months: 24.0
+    max_months: 60.0  # 2 years to <5 years
+    description: "Preschool child (2 to <5 years)"
+    source:
+      body: "NICE / WHO IMCI"
+      document_title: "NG143 Fever in under 5s"
+      year: 2019
+      section: "Scope"
+      verified: false
+
+  school_age_child:
+    min_months: 60.0
+    max_months: 144.0  # 5 to <12 years
+    description: "School age child (5 to <12 years)"
+    source:
+      body: "Indian Academy of Pediatrics (IAP)"
+      document_title: "Standard Treatment Guidelines"
+      year: 2022
+      section: "General Pediatrics"
+      verified: false
+
+  adolescent:
+    min_months: 144.0
+    max_months: 216.0  # 12 to <18 years
+    description: "Adolescent (12 to <18 years)"
+    source:
+      body: "WHO"
+      document_title: "Adolescent Health Guidelines"
+      year: 2020
+      section: "Age Definitions"
+      verified: false
+
+  adult:
+    min_months: 216.0
+    max_months: 780.0  # 18 to <65 years
+    description: "Adult (18 to <65 years)"
+    source:
+      body: "Standard Clinical Practice"
+      document_title: "Adult Triage Categories"
+      year: 2020
+      section: "Demographic Stratification"
+      verified: false
+
+  older_adult:
+    min_months: 780.0
+    max_months: 1500.0  # >= 65 years
+    description: "Older adult / Senior (>=65 years)"
+    source:
+      body: "British Geriatrics Society"
+      document_title: "Silver Book II: Acute Care of Older People"
+      year: 2021
+      section: "Frailty and Acute Presentation"
+      verified: false
+
+  unknown:
+    min_months: null
+    max_months: null
+    description: "Age unspecified, unknown, or 'prefer not to say'; must prompt follow-up without assuming adult"
+    source:
+      body: "SafeTriage Clinical Invariant"
+      document_title: "Age-band Safety Protocol"
+      year: 2026
+      section: "Incomplete demographic protection"
+      verified: false

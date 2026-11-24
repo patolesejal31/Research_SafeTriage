@@ -1,0 +1,237 @@
+# SafeTriage Raw-Keyword Emergency Safety Net
+# Operates directly on sanitized raw text before Stage B.
+# Provides a deterministic fail-safe against NLP extraction failure or misclassification.
+# Source citations are preliminary and marked UNVERIFIED pending formal clinician review.
+
+metadata:
+  purpose: "Deterministic emergency override for critical life-threatening keywords."
+  review_status: "UNVERIFIED"
+  verified: false
+  todo_notes: "Clinician panel must sign off on vernacular transliterations and sensitivity bounds."
+
+keywords:
+  # Acute Coronary Syndrome / Myocardial Infarction
+  - phrase: "chest pain"
+    category: "cardiac"
+    level: 1
+    language: "en"
+    source: "AHA/ACC 2021 Guideline for the Evaluation and Diagnosis of Chest Pain"
+  - phrase: "heart attack"
+    category: "cardiac"
+    level: 1
+    language: "en"
+    source: "AHA/ACC 2021 Guideline for the Evaluation and Diagnosis of Chest Pain"
+  - phrase: "dil ka daura"
+    category: "cardiac"
+    level: 1
+    language: "hinglish"
+    source: "TODO: verify with Indian emergency clinical panel"
+  - phrase: "chhaati mein dard"
+    category: "cardiac"
+    level: 1
+    language: "hinglish"
+    source: "TODO: verify with Indian emergency clinical panel"
+  - phrase: "chaati madhe dukhatahe"
+    category: "cardiac"
+    level: 1
+    language: "marathi_transliterated"
+    source: "TODO: verify with Indian emergency clinical panel"
+
+  # Respiratory Distress / Airway Compromise
+  - phrase: "can't breathe"
+    category: "respiratory"
+    level: 1
+    language: "en"
+    source: "BTS/SIGN British Guideline on the Management of Asthma (2019)"
+  - phrase: "cannot breathe"
+    category: "respiratory"
+    level: 1
+    language: "en"
+    source: "BTS/SIGN British Guideline on the Management of Asthma (2019)"
+  - phrase: "gasping for air"
+    category: "respiratory"
+    level: 1
+    language: "en"
+    source: "WHO IMCI Guidelines"
+  - phrase: "saas nahi aa rahi"
+    category: "respiratory"
+    level: 1
+    language: "hinglish"
+    source: "TODO: verify with Indian emergency clinical panel"
+  - phrase: "saans nahi aa rahi"
+    category: "respiratory"
+    level: 1
+    language: "hinglish"
+    source: "TODO: verify with Indian emergency clinical panel"
+  - phrase: "shwas ghyayla tras"
+    category: "respiratory"
+    level: 1
+    language: "marathi_transliterated"
+    source: "TODO: verify with Indian emergency clinical panel"
+
+  # Altered Mental Status / Unconsciousness
+  - phrase: "unconscious"
+    category: "neurological"
+    level: 1
+    language: "en"
+    source: "NICE Clinical Guideline [CG176]: Head injury"
+  - phrase: "unresponsive"
+    category: "neurological"
+    level: 1
+    language: "en"
+    source: "AHA Basic Life Support (BLS) Guidelines"
+  - phrase: "not responding"
+    category: "neurological"
+    level: 1
+    language: "en"
+    source: "AHA Basic Life Support (BLS) Guidelines"
+  - phrase: "passed out"
+    category: "neurological"
+    level: 1
+    language: "en"
+    source: "ESC Guidelines for the diagnosis and management of syncope"
+  - phrase: "behosh"
+    category: "neurological"
+    level: 1
+    language: "hinglish"
+    source: "TODO: verify with Indian emergency clinical panel"
+  - phrase: "hosh nahi"
+    category: "neurological"
+    level: 1
+    language: "hinglish"
+    source: "TODO: verify with Indian emergency clinical panel"
+  - phrase: "shuddhi var nahi"
+    category: "neurological"
+    level: 1
+    language: "marathi_transliterated"
+    source: "TODO: verify with Indian emergency clinical panel"
+
+  # Stroke / FAST
+  - phrase: "facial droop"
+    category: "stroke"
+    level: 1
+    language: "en"
+    source: "AHA/ASA Stroke Guidelines (FAST)"
+  - phrase: "face drooping"
+    category: "stroke"
+    level: 1
+    language: "en"
+    source: "AHA/ASA Stroke Guidelines (FAST)"
+  - phrase: "slurred speech"
+    category: "stroke"
+    level: 1
+    language: "en"
+    source: "AHA/ASA Stroke Guidelines (FAST)"
+  - phrase: "arm weakness"
+    category: "stroke"
+    level: 1
+    language: "en"
+    source: "AHA/ASA Stroke Guidelines (FAST)"
+  - phrase: "stroke"
+    category: "stroke"
+    level: 1
+    language: "en"
+    source: "AHA/ASA Stroke Guidelines (FAST)"
+  - phrase: "lakwa"
+    category: "stroke"
+    level: 1
+    language: "hinglish"
+    source: "TODO: verify with Indian emergency clinical panel"
+
+  # Active Seizure
+  - phrase: "seizure"
+    category: "seizure"
+    level: 1
+    language: "en"
+    source: "NICE Guideline [NG217]: Epilepsies"
+  - phrase: "convulsion"
+    category: "seizure"
+    level: 1
+    language: "en"
+    source: "WHO IMCI Guidelines"
+  - phrase: "fits"
+    category: "seizure"
+    level: 1
+    language: "en"
+    source: "WHO IMCI Guidelines"
+  - phrase: "mirgi"
+    category: "seizure"
+    level: 1
+    language: "hinglish"
+    source: "TODO: verify with Indian emergency clinical panel"
+  - phrase: "zatke"
+    category: "seizure"
+    level: 1
+    language: "marathi_transliterated"
+    source: "TODO: verify with Indian emergency clinical panel"
+
+  # Exsanguinating Bleeding
+  - phrase: "heavy bleeding"
+    category: "hemorrhage"
+    level: 1
+    language: "en"
+    source: "Stop the Bleed / ACS Trauma Guidelines"
+  - phrase: "bleeding uncontrollably"
+    category: "hemorrhage"
+    level: 1
+    language: "en"
+    source: "Stop the Bleed / ACS Trauma Guidelines"
+  - phrase: "vomiting blood"
+    category: "hemorrhage"
+    level: 1
+    language: "en"
+    source: "ACG Clinical Guideline: Upper GI and Ulcer Bleeding"
+  - phrase: "coughing blood"
+    category: "hemorrhage"
+    level: 1
+    language: "en"
+    source: "BTS Guideline for the Management of Hemoptysis"
+  - phrase: "khoon ki ulti"
+    category: "hemorrhage"
+    level: 1
+    language: "hinglish"
+    source: "TODO: verify with Indian emergency clinical panel"
+  - phrase: "khup rakt yetoy"
+    category: "hemorrhage"
+    level: 1
+    language: "marathi_transliterated"
+    source: "TODO: verify with Indian emergency clinical panel"
+
+  # Airway Angioedema / Anaphylaxis
+  - phrase: "throat swelling"
+    category: "anaphylaxis"
+    level: 1
+    language: "en"
+    source: "World Allergy Organization (WAO) Anaphylaxis Guidelines"
+  - phrase: "tongue swelling"
+    category: "anaphylaxis"
+    level: 1
+    language: "en"
+    source: "World Allergy Organization (WAO) Anaphylaxis Guidelines"
+  - phrase: "anaphylaxis"
+    category: "anaphylaxis"
+    level: 1
+    language: "en"
+    source: "World Allergy Organization (WAO) Anaphylaxis Guidelines"
+
+  # Envenomation
+  - phrase: "snake bite"
+    category: "envenomation"
+    level: 1
+    language: "en"
+    source: "WHO Guidelines for the Management of Snakebites in South-East Asia"
+  - phrase: "snakebite"
+    category: "envenomation"
+    level: 1
+    language: "en"
+    source: "WHO Guidelines for the Management of Snakebites in South-East Asia"
+  - phrase: "saanp ne kata"
+    category: "envenomation"
+    level: 1
+    language: "hinglish"
+    source: "TODO: verify with Indian emergency clinical panel"
+  - phrase: "saap chavla"
+    category: "envenomation"
+    level: 1
+    language: "marathi_transliterated"
+    source: "TODO: verify with Indian emergency clinical panel"

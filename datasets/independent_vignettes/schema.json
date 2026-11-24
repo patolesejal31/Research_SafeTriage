@@ -1,0 +1,74 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "IndependentClinicalVignetteSchema",
+  "description": "Schema for independently authored clinical triage vignettes (not generated from templates).",
+  "type": "object",
+  "required": [
+    "case_id",
+    "tier",
+    "clinical_vignette",
+    "specialty",
+    "ground_truth_urgency",
+    "gold_rationale",
+    "assigned_by",
+    "clinician_reviewed"
+  ],
+  "properties": {
+    "case_id": {
+      "type": "string",
+      "pattern": "^IND_[A-Z]{3,6}_[0-9]{3,4}$",
+      "description": "Unique vignette identifier."
+    },
+    "tier": {
+      "type": "string",
+      "enum": ["independent_vignettes"],
+      "description": "Must be 'independent_vignettes'."
+    },
+    "clinical_vignette": {
+      "type": "string",
+      "minLength": 5,
+      "description": "Free-text description of patient presentation."
+    },
+    "specialty": {
+      "type": "string",
+      "enum": [
+        "cardiac",
+        "neuro",
+        "respiratory",
+        "allergy_immune",
+        "gastro_abdominal",
+        "infectious_fever",
+        "pediatric",
+        "environmental_trauma",
+        "genitourinary",
+        "general_self_care"
+      ]
+    },
+    "ground_truth_urgency": {
+      "type": "integer",
+      "enum": [1, 2, 3, 4],
+      "description": "Target triage urgency: 1=Emergency, 2=Urgent, 3=Routine, 4=Self-care."
+    },
+    "gold_rationale": {
+      "type": "string",
+      "description": "Clinical reasoning justifying the urgency level based on established triage guidelines (e.g. MTS, ESI)."
+    },
+    "assigned_by": {
+      "type": "string",
+      "description": "Author credentials or identifier (e.g., 'board_certified_emergency_physician')."
+    },
+    "clinician_reviewed": {
+      "type": "boolean",
+      "description": "Whether this vignette has been verified by an independent clinician."
+    },
+    "demographics": {
+      "type": "object",
+      "properties": {
+        "age_years": { "type": ["number", "null"] },
+        "age_months": { "type": ["number", "null"] },
+        "sex": { "type": ["string", "null"] }
+      }
+    }
+  },
+  "additionalProperties": false
+}

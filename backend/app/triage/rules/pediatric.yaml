@@ -1,0 +1,109 @@
+# Pediatric Rules
+metadata:
+  specialty: "pediatric"
+  review_status: "UNVERIFIED"
+
+rules:
+  - id: "PED-001"
+    level: 1
+    name: "General Pediatric Danger Signs / IMCI Emergency"
+    conditions:
+      all_of:
+        - age_band:
+            any_of: ["neonate", "young_infant", "older_infant", "toddler", "preschool_child", "school_age_child"]
+      any_of:
+        - concept: "altered_mental_status"
+          status: "POSITIVE"
+        - concept: "seizure"
+          status: "POSITIVE"
+        - modifier: "breathless"
+    rationale: "Presence of general danger signs (inability to feed, lethargy/unconsciousness, convulsing, or severe respiratory indrawing) indicates immediate risk of pediatric death."
+    recommended_action: "Transport the child immediately to the nearest pediatric emergency hospital or call emergency services (112 / 108)."
+    timeframe: "Immediate (0-15 minutes) [suggested]"
+    source:
+      body: "World Health Organization (WHO) / UNICEF"
+      document_title: "Integrated Management of Childhood Illness (IMCI)"
+      year: 2019
+      section: "Assess General Danger Signs"
+      url: "TODO: verify exact WHO IMCI URL"
+      access_date: "2026-11-24"
+      verified: false
+    review_status: "UNVERIFIED"
+    reviewer_initials: null
+
+  - id: "PED-002"
+    level: 1
+    name: "Neonatal / Young Infant Fever (<3 Months)"
+    conditions:
+      all_of:
+        - concept: "fever"
+          status: "POSITIVE"
+        - age_band:
+            any_of: ["neonate", "young_infant"]
+    rationale: "Fever in infants under 3 months (<84 days) constitutes an emergency red-flag for occult serious bacterial infection (bacteremia, meningitis, pyelonephritis)."
+    recommended_action: "Seek immediate emergency pediatric evaluation at a hospital emergency center (112 / 108)."
+    timeframe: "Immediate (0-15 minutes) [suggested]"
+    source:
+      body: "National Institute for Health and Care Excellence (NICE)"
+      document_title: "Fever in under 5s: assessment and initial management (NG143)"
+      year: 2019
+      section: "1.2.2 High risk features: Age < 3 months with temperature >= 38C"
+      url: "TODO: verify exact NICE NG143 URL"
+      access_date: "2026-11-24"
+      verified: false
+    review_status: "UNVERIFIED"
+    reviewer_initials: null
+
+  - id: "PED-003"
+    level: 2
+    name: "Pediatric Fever in Older Infants (3 to <6 Months)"
+    conditions:
+      all_of:
+        - concept: "fever"
+          status: "POSITIVE"
+        - age_band: "older_infant"
+      none_of:
+        - concept: "altered_mental_status"
+          status: "POSITIVE"
+        - concept: "breathlessness"
+          status: "POSITIVE"
+    rationale: "Fever in infants aged 3 to 6 months represents an intermediate (amber-flag) risk category requiring prompt clinical assessment within hours."
+    recommended_action: "Bring the infant to an urgent pediatric clinic or acute assessment unit within 2-4 hours."
+    timeframe: "Within 2-4 hours [suggested]"
+    source:
+      body: "National Institute for Health and Care Excellence (NICE)"
+      document_title: "Fever in under 5s: assessment and initial management (NG143)"
+      year: 2019
+      section: "1.2.3 Intermediate risk features: Age 3-6 months with temperature >= 39C"
+      url: "TODO: verify exact NICE NG143 URL"
+      access_date: "2026-11-24"
+      verified: false
+    review_status: "UNVERIFIED"
+    reviewer_initials: null
+
+  - id: "PED-004"
+    level: 2
+    name: "Pediatric Gastroenteritis With Significant Fluid Loss"
+    conditions:
+      all_of:
+        - concept: "diarrhea"
+          status: "POSITIVE"
+        - age_band:
+            any_of: ["young_infant", "older_infant", "toddler", "preschool_child"]
+      any_of:
+        - concept: "vomiting"
+          status: "POSITIVE"
+        - severity: "moderate"
+    rationale: "Young children with combined gastrointestinal fluid losses deteriorate rapidly into hypovolemic dehydration."
+    recommended_action: "Take the child to an urgent pediatric care center or emergency department today."
+    timeframe: "Within 2-4 hours [suggested]"
+    source:
+      body: "Indian Academy of Pediatrics (IAP)"
+      document_title: "IAP Guidelines on Management of Acute Diarrhea in Children"
+      year: 2021
+      section: "Section 3: Assessment and Referral"
+      url: "TODO: verify exact IAP Diarrhea URL"
+      access_date: "2026-11-24"
+      verified: false
+    review_status: "UNVERIFIED"
+    reviewer_initials: null
