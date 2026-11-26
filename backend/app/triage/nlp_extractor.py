@@ -26,7 +26,7 @@ from dataclasses import dataclass, field
 from enum import Enum
 from pathlib import Path
 import re
-from typing import Any, Dict, List, Optional, Set, Tuple
+from typing import Any, Dict, List, Optional, Tuple
 import unicodedata
 
 from rapidfuzz import fuzz

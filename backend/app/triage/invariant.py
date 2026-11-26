@@ -26,7 +26,6 @@ from typing import Dict, Optional
 
 from app.core.urgency import (
     UNCERTAIN,
-    UncertainType,
     Urgency,
     UrgencyOrUncertain,
     validate_urgency,

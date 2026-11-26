@@ -26,9 +26,14 @@ router = APIRouter(prefix="/followups", tags=["Follow-ups"])
     response_model=AssessmentResponse,
     summary="Submit answers to follow-up questions and re-assess triage urgency",
 )
+@router.post(
+    "/{assessment_id}",
+    response_model=AssessmentResponse,
+    summary="Submit answers to follow-up questions by assessment ID",
+)
 def submit_followups(
     req: FollowUpSubmitRequest,
-    assessment_id: str,
+    assessment_id: Optional[str] = None,
     x_session_id: Optional[str] = Header(None, alias="X-Session-ID"),
     current_user: Optional[User] = Depends(get_current_user_optional),
     db: Session = Depends(get_db),
@@ -117,6 +122,7 @@ def submit_followups(
 
     return AssessmentResponse(
         id=assessment.id,
+        assessment_id=assessment.id,
         created_at=assessment.created_at,
         final_urgency=assessment.final_urgency,
         is_uncertain=assessment.is_uncertain,

@@ -1,6 +1,5 @@
 """Pytest configuration and fixtures for SafeTriage."""
 
-import os
 import sys
 from pathlib import Path
 import pytest

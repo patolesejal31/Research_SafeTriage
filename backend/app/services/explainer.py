@@ -95,11 +95,11 @@ class Explainer:
 
         if is_emergency:
             lines.append(EMERGENCY_NOTICE)
-            lines.append(f"**Assessment Level: 1 — Emergency**")
+            lines.append("**Assessment Level: 1 — Emergency**")
             includes_emergency = True
         elif is_urgent:
             lines.append(URGENT_NOTICE)
-            lines.append(f"**Assessment Level: 2 — Urgent**")
+            lines.append("**Assessment Level: 2 — Urgent**")
             includes_emergency = True
         elif is_uncertain:
             lines.append(UNCERTAIN_NOTICE)
@@ -156,6 +156,30 @@ class Explainer:
             for ent in uncertain_ents:
                 lines.append(f"- {ent.canonical_concept.replace('_', ' ').title()}")
             lines.append("")
+
+        # --- Next steps & actionable guidance ---
+        lines.append("### Recommended Next Steps")
+        if is_emergency:
+            lines.append("- **Immediate Action:** Call emergency services (112 or 108) or go to the nearest emergency department right away.")
+            lines.append("- Do not drive yourself; arrange emergency ambulance transport.")
+            lines.append("- Stay calm, sit or lie comfortably, and keep emergency contact informed.")
+        elif is_urgent:
+            lines.append("- **Prompt Medical Review:** Seek prompt evaluation by a medical doctor or visit an urgent care center within hours.")
+            lines.append("- Monitor your symptoms closely; if you develop severe pain, shortness of breath, dizziness, or weakness, immediately call 112 / 108.")
+            lines.append("- Avoid strenuous physical activities until evaluated by a healthcare professional.")
+        elif is_uncertain:
+            lines.append("- **Direct Clinical Assessment Needed:** Your reported presentation cannot be safely categorized by automated rules alone.")
+            lines.append("- Please consult a primary care doctor or healthcare clinic for direct examination.")
+            lines.append("- If you experience any acute red-flag symptoms (severe chest pain, breathing difficulty, sudden numbness, or heavy bleeding), call 112 / 108 immediately.")
+        elif level_int == 3:
+            lines.append("- **Routine Healthcare Consultation:** Schedule a routine appointment with your primary care physician or outpatient clinic.")
+            lines.append("- Note down your symptoms, when they started, and any over-the-counter remedies tried.")
+            lines.append("- If symptoms fail to improve over the next several days or progressively worsen, seek earlier clinical review.")
+        elif level_int == 4:
+            lines.append("- **Supportive Home Care:** Your symptoms appear mild and consistent with self-limiting presentations suitable for supportive care.")
+            lines.append("- Maintain adequate oral hydration, rest well, and monitor your symptoms.")
+            lines.append("- Seek medical attention if symptoms persist beyond 7-10 days, or immediately if you develop high fever, breathing distress, or acute chest discomfort.")
+        lines.append("")
 
         # --- Models used ---
         model_parts: List[str] = ["Template explainer (deterministic)"]
@@ -232,7 +256,11 @@ class Explainer:
         """
         triggered_ids: Set[str] = {r.id for r in triggered_rules}
 
-        if llm_explanation_text:
+        # If provider is mock or no real LLM prose is provided, use the detailed template explainer
+        from app.services.llm_adapter import MOCK_PROVIDER_NAME
+        is_mock_provider = (llm_provider_name == MOCK_PROVIDER_NAME)
+
+        if llm_explanation_text and not is_mock_provider:
             passed, hallucinated = self.check_llm_faithfulness(
                 llm_explanation_text, triggered_ids
             )

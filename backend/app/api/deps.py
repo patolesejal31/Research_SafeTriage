@@ -1,8 +1,8 @@
 """API Dependencies: Database, Authentication, Role Verification, and Rate Limiting."""
 
 import time
-from typing import Dict, Generator, List, Optional
-from fastapi import Depends, Header, HTTPException, Request, status
+from typing import Dict, List, Optional
+from fastapi import Depends, HTTPException, Request, status
 from fastapi.security import HTTPAuthorizationCredentials, HTTPBearer
 from jose import JWTError
 from sqlalchemy.orm import Session

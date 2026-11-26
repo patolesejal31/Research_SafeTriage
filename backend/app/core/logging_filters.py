@@ -24,7 +24,7 @@ class SensitiveDataFilter(logging.Filter):
     def filter(self, record: logging.LogRecord) -> bool:
         if isinstance(record.msg, str):
             record.msg = self._redact_string(record.msg)
-        
+
         if record.args:
             if isinstance(record.args, dict):
                 record.args = {k: self._sanitize_arg(v) for k, v in record.args.items()}

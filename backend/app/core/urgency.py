@@ -98,7 +98,7 @@ def is_downgrade(old: Urgency, new: Urgency) -> bool:
         raise TypeError("UNCERTAIN cannot be evaluated for urgency downgrade")
     if not isinstance(old, Urgency) or not isinstance(new, Urgency):
         raise TypeError(f"Arguments must be Urgency instances, got {type(old).__name__} and {type(new).__name__}")
-    
+
     return int(new) > int(old)
 
 

@@ -22,7 +22,6 @@ from __future__ import annotations
 import json
 import logging
 from pathlib import Path
-from typing import Any, Dict, List, Optional
 from unittest.mock import MagicMock, patch
 
 import pytest
@@ -39,13 +38,10 @@ from app.services.llm_adapter import (
 from app.services.ml_baseline import MLBaseline, _extract_feature_string
 from app.triage.engine import RuleEngine
 from app.triage.followups import FollowUpAnswer, FollowUpEngine
-from app.triage.invariant import ComponentResult, ComponentStatus, ComponentType
+from app.triage.invariant import ComponentStatus, ComponentType
 from app.triage.nlp_extractor import (
-    EntityStatus,
     ExtractionResult,
     ExtractedAttributes,
-    ExtractedEntity,
-    MatchType,
     NLPExtractor,
 )
 from app.triage.pipeline import TriagePipeline

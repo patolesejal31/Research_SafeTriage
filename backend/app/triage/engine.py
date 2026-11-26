@@ -21,7 +21,7 @@ import yaml
 
 from app.core.urgency import Urgency
 from app.triage.invariant import ComponentResult, ComponentStatus, ComponentType
-from app.triage.nlp_extractor import EntityStatus, ExtractionResult, ExtractedEntity
+from app.triage.nlp_extractor import EntityStatus, ExtractionResult
 
 RULES_DIR = Path(__file__).parent / "rules"
 AGE_BANDS_PATH = Path(__file__).parent / "age_bands.yaml"

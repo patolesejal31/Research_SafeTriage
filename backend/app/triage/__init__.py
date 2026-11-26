@@ -11,8 +11,8 @@ from app.triage.invariant import (
     enforce_invariant,
 )
 from app.triage.nlp_extractor import EntityStatus, ExtractedEntity, MatchType, NLPExtractor
-from app.triage.pipeline import AssessmentResult, StageAResult, TriagePipeline
 from app.triage.safety_net import SafetyNet, SafetyNetResult
+from app.triage.pipeline import AssessmentResult, StageAResult, TriagePipeline
 
 __all__ = [
     "AuditRecord",

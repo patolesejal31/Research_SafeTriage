@@ -19,7 +19,6 @@ import pytest
 
 from app.triage.nlp_extractor import (
     EntityStatus,
-    ExtractedEntity,
     MatchType,
     NLPExtractor,
 )

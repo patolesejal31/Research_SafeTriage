@@ -1,7 +1,6 @@
 """Edge cases and branch coverage tests for NLPExtractor."""
 
 from pathlib import Path
-import pytest
 
 from app.triage.nlp_extractor import NLPExtractor
 

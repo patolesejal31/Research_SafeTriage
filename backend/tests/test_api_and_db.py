@@ -21,21 +21,19 @@ Test Coverage:
 from __future__ import annotations
 
 import io
-import json
 import logging
 import uuid
 from typing import Generator
 import pytest
 from fastapi.testclient import TestClient
 from sqlalchemy import create_engine, event
-from sqlalchemy.orm import Session, sessionmaker
+from sqlalchemy.orm import Session
 
 from app.api.deps import _login_attempts, get_db
-from app.core.config import Settings, settings
+from app.core.config import Settings
 from app.core.logging_filters import SensitiveDataFilter
 from app.core.security import (
     PasswordPolicyError,
-    create_access_token,
     hash_password,
     validate_password_complexity,
     verify_password,
@@ -43,8 +41,6 @@ from app.core.security import (
 from app.db.base import Base
 from app.db.models import (
     Assessment,
-    EvaluationPrediction,
-    EvaluationRun,
     OverrideLog,
     RuleTrigger,
     StructuredSymptom,
@@ -52,7 +48,7 @@ from app.db.models import (
 )
 from app.db.seed import seed_default_users
 from app.main import app
-from app.triage.followups import FollowUpAnswer, FollowUpEngine
+from app.triage.followups import FollowUpEngine
 
 
 # ---------------------------------------------------------------------------

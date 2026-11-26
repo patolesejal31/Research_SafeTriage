@@ -1,0 +1,1151 @@
+{
+  "ablations": {
+    "hybrid_without_llm": {
+      "accuracy": 0.2381,
+      "confusion_matrix": {
+        "true_1_pred_1": 8,
+        "true_1_pred_2": 0,
+        "true_1_pred_3": 0,
+        "true_1_pred_4": 0,
+        "true_1_pred_UNCERTAIN": 27,
+        "true_2_pred_1": 12,
+        "true_2_pred_2": 2,
+        "true_2_pred_3": 0,
+        "true_2_pred_4": 0,
+        "true_2_pred_UNCERTAIN": 38,
+        "true_3_pred_1": 8,
+        "true_3_pred_2": 2,
+        "true_3_pred_3": 0,
+        "true_3_pred_4": 0,
+        "true_3_pred_UNCERTAIN": 58,
+        "true_4_pred_1": 2,
+        "true_4_pred_2": 0,
+        "true_4_pred_3": 8,
+        "true_4_pred_4": 0,
+        "true_4_pred_UNCERTAIN": 24
+      },
+      "critical_under_triage_count": 0,
+      "critical_under_triage_rate": 0.0,
+      "l12_sensitivity": 0.2529,
+      "l12_sensitivity_ci": [
+        0.1733,
+        0.3533
+      ],
+      "l12_specificity": 0.4,
+      "l1_sensitivity": 0.2286,
+      "l1_sensitivity_ci": [
+        0.1207,
+        0.3902
+      ],
+      "l1_specificity": 0.3529,
+      "macro_f1": 0.1608,
+      "n_total": 189,
+      "n_valid": 42,
+      "over_triage_ci": [
+        0.6147,
+        0.8652
+      ],
+      "over_triage_count": 32,
+      "over_triage_rate": 0.7619,
+      "per_class": {
+        "1": {
+          "f1": 0.4211,
+          "precision": 0.2667,
+          "recall": 1.0,
+          "specificity": 0.3529,
+          "support": 35
+        },
+        "2": {
+          "f1": 0.2222,
+          "precision": 0.5,
+          "recall": 0.1429,
+          "specificity": 0.9286,
+          "support": 52
+        },
+        "3": {
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "specificity": 0.75,
+          "support": 68
+        },
+        "4": {
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "specificity": 1.0,
+          "support": 34
+        }
+      },
+      "uncertain_count": 147,
+      "uncertain_rate": 0.7778,
+      "under_triage_ci": [
+        0.0,
+        0.0838
+      ],
+      "under_triage_count": 0,
+      "under_triage_rate": 0.0,
+      "under_triage_severity": 0.0,
+      "weighted_f1": 0.1391
+    },
+    "hybrid_without_ml": {
+      "accuracy": 0.2857,
+      "confusion_matrix": {
+        "true_1_pred_1": 6,
+        "true_1_pred_2": 0,
+        "true_1_pred_3": 2,
+        "true_1_pred_4": 0,
+        "true_1_pred_UNCERTAIN": 27,
+        "true_2_pred_1": 14,
+        "true_2_pred_2": 0,
+        "true_2_pred_3": 0,
+        "true_2_pred_4": 0,
+        "true_2_pred_UNCERTAIN": 38,
+        "true_3_pred_1": 4,
+        "true_3_pred_2": 0,
+        "true_3_pred_3": 6,
+        "true_3_pred_4": 0,
+        "true_3_pred_UNCERTAIN": 58,
+        "true_4_pred_1": 0,
+        "true_4_pred_2": 0,
+        "true_4_pred_3": 10,
+        "true_4_pred_4": 0,
+        "true_4_pred_UNCERTAIN": 24
+      },
+      "critical_under_triage_count": 2,
+      "critical_under_triage_rate": 0.0571,
+      "l12_sensitivity": 0.2299,
+      "l12_sensitivity_ci": [
+        0.154,
+        0.3286
+      ],
+      "l12_specificity": 0.8,
+      "l1_sensitivity": 0.1714,
+      "l1_sensitivity_ci": [
+        0.081,
+        0.3268
+      ],
+      "l1_specificity": 0.4706,
+      "macro_f1": 0.2009,
+      "n_total": 189,
+      "n_valid": 42,
+      "over_triage_ci": [
+        0.5155,
+        0.7899
+      ],
+      "over_triage_count": 28,
+      "over_triage_rate": 0.6667,
+      "per_class": {
+        "1": {
+          "f1": 0.375,
+          "precision": 0.25,
+          "recall": 0.75,
+          "specificity": 0.4706,
+          "support": 35
+        },
+        "2": {
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "specificity": 1.0,
+          "support": 52
+        },
+        "3": {
+          "f1": 0.4286,
+          "precision": 0.3333,
+          "recall": 0.6,
+          "specificity": 0.625,
+          "support": 68
+        },
+        "4": {
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "specificity": 1.0,
+          "support": 34
+        }
+      },
+      "uncertain_count": 147,
+      "uncertain_rate": 0.7778,
+      "under_triage_ci": [
+        0.0132,
+        0.1579
+      ],
+      "under_triage_count": 2,
+      "under_triage_rate": 0.0476,
+      "under_triage_severity": 2.0,
+      "weighted_f1": 0.2236
+    },
+    "rules_without_negation": {
+      "accuracy": 0.4688,
+      "confusion_matrix": {
+        "true_1_pred_1": 12,
+        "true_1_pred_2": 0,
+        "true_1_pred_3": 4,
+        "true_1_pred_4": 0,
+        "true_1_pred_UNCERTAIN": 19,
+        "true_2_pred_1": 10,
+        "true_2_pred_2": 8,
+        "true_2_pred_3": 0,
+        "true_2_pred_4": 0,
+        "true_2_pred_UNCERTAIN": 34,
+        "true_3_pred_1": 6,
+        "true_3_pred_2": 2,
+        "true_3_pred_3": 10,
+        "true_3_pred_4": 0,
+        "true_3_pred_UNCERTAIN": 50,
+        "true_4_pred_1": 0,
+        "true_4_pred_2": 2,
+        "true_4_pred_3": 10,
+        "true_4_pred_4": 0,
+        "true_4_pred_UNCERTAIN": 22
+      },
+      "critical_under_triage_count": 4,
+      "critical_under_triage_rate": 0.1143,
+      "l12_sensitivity": 0.3448,
+      "l12_sensitivity_ci": [
+        0.2534,
+        0.4494
+      ],
+      "l12_specificity": 0.6667,
+      "l1_sensitivity": 0.3429,
+      "l1_sensitivity_ci": [
+        0.2083,
+        0.5085
+      ],
+      "l1_specificity": 0.6667,
+      "macro_f1": 0.3887,
+      "n_total": 189,
+      "n_valid": 64,
+      "over_triage_ci": [
+        0.3518,
+        0.5893
+      ],
+      "over_triage_count": 30,
+      "over_triage_rate": 0.4688,
+      "per_class": {
+        "1": {
+          "f1": 0.5455,
+          "precision": 0.4286,
+          "recall": 0.75,
+          "specificity": 0.6667,
+          "support": 35
+        },
+        "2": {
+          "f1": 0.5333,
+          "precision": 0.6667,
+          "recall": 0.4444,
+          "specificity": 0.913,
+          "support": 52
+        },
+        "3": {
+          "f1": 0.4762,
+          "precision": 0.4167,
+          "recall": 0.5556,
+          "specificity": 0.6957,
+          "support": 68
+        },
+        "4": {
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "specificity": 1.0,
+          "support": 34
+        }
+      },
+      "uncertain_count": 125,
+      "uncertain_rate": 0.6614,
+      "under_triage_ci": [
+        0.0246,
+        0.15
+      ],
+      "under_triage_count": 4,
+      "under_triage_rate": 0.0625,
+      "under_triage_severity": 2.0,
+      "weighted_f1": 0.4191
+    }
+  },
+  "error_analysis_dangerous_misses": [],
+  "hypothesis_status": {
+    "H1_llm_improves_sensitivity": "BLOCKED (Evaluated with MockProvider)",
+    "H2_deterministic_safety_net_prevents_critical_undertriage": "SUPPORTED (0.0% critical under-triage observed in hybrid pipeline)",
+    "H3_llm_explanations_increase_user_comprehension": "BLOCKED (Requires human user study)",
+    "H4_llm_reasoning_reduces_overtriage_safely": "BLOCKED (Evaluated with MockProvider)"
+  },
+  "metadata": {
+    "disclaimer": "SafeTriage is a research prototype. Non-diagnostic, non-prescriptive. Emergency: 112 / 108.",
+    "evaluation_tag": "synthetic-evaluation",
+    "git_commit_hash": "7262777d6d3e44b20b748b79107cf3f7afee79d2",
+    "label_caption": "developer-assigned, unreviewed labels",
+    "llm_is_mock": true,
+    "llm_provider": "MOCK (not a real LLM)",
+    "n_test_cases": 189,
+    "n_test_families": 11,
+    "random_seed": 42,
+    "test_checksum": "5c95af7961422cb37e44525f4ec9401401eb00fff7a7db0a71278c98acd79475",
+    "test_checksum_verified": true,
+    "timestamp_utc": "2026-11-24T13:05:10.201460+00:00"
+  },
+  "robustness": {
+    "code_mixing": {
+      "accuracy": 0.3333,
+      "critical_under_triage_count": 0,
+      "n_cases": 189,
+      "over_triage_rate": 0.6667,
+      "uncertain_rate": 0.746,
+      "under_triage_rate": 0.0
+    },
+    "contradictions": {
+      "accuracy": 0.3636,
+      "critical_under_triage_count": 2,
+      "n_cases": 189,
+      "over_triage_rate": 0.3636,
+      "uncertain_rate": 0.8836,
+      "under_triage_rate": 0.2727
+    },
+    "empty": {
+      "accuracy": 0.0,
+      "critical_under_triage_count": 0,
+      "n_cases": 189,
+      "over_triage_rate": 0.0,
+      "uncertain_rate": 1.0,
+      "under_triage_rate": 0.0
+    },
+    "minimization": {
+      "accuracy": 0.3333,
+      "critical_under_triage_count": 0,
+      "n_cases": 189,
+      "over_triage_rate": 0.6667,
+      "uncertain_rate": 0.746,
+      "under_triage_rate": 0.0
+    },
+    "prompt_injection": {
+      "accuracy": 0.3333,
+      "critical_under_triage_count": 0,
+      "n_cases": 189,
+      "over_triage_rate": 0.6667,
+      "uncertain_rate": 0.746,
+      "under_triage_rate": 0.0
+    },
+    "typos": {
+      "accuracy": 0.325,
+      "critical_under_triage_count": 0,
+      "n_cases": 189,
+      "over_triage_rate": 0.675,
+      "uncertain_rate": 0.7884,
+      "under_triage_rate": 0.0
+    },
+    "very_long": {
+      "accuracy": 0.3333,
+      "critical_under_triage_count": 0,
+      "n_cases": 189,
+      "over_triage_rate": 0.6667,
+      "uncertain_rate": 0.746,
+      "under_triage_rate": 0.0
+    }
+  },
+  "same_author_circularity_disclosure": "Rule-only and Hybrid systems achieve high performance on synthetic_dev because evaluation templates and rules were authored by the same development team. This performance reflects internal consistency and invariant enforcement, NOT clinical validation on real-world patients.",
+  "subgroups": {
+    "by_language_style": {
+      "colloquial": {
+        "accuracy": 0.25,
+        "macro_f1": 0.125,
+        "n_cases": 22,
+        "over_triage_rate": 0.75,
+        "under_triage_rate": 0.0,
+        "unreviewed_by_native_speaker": false
+      },
+      "formal": {
+        "accuracy": 0.3333,
+        "macro_f1": 0.1667,
+        "n_cases": 22,
+        "over_triage_rate": 0.6667,
+        "under_triage_rate": 0.0,
+        "unreviewed_by_native_speaker": false
+      },
+      "hinglish": {
+        "accuracy": 0.2,
+        "macro_f1": 0.1,
+        "n_cases": 22,
+        "over_triage_rate": 0.8,
+        "under_triage_rate": 0.0,
+        "unreviewed_by_native_speaker": true
+      },
+      "historical": {
+        "accuracy": 0.0,
+        "macro_f1": 0.0,
+        "n_cases": 22,
+        "over_triage_rate": 1.0,
+        "under_triage_rate": 0.0,
+        "unreviewed_by_native_speaker": false
+      },
+      "marathi": {
+        "accuracy": 0.0,
+        "macro_f1": 0.0,
+        "n_cases": 22,
+        "over_triage_rate": 1.0,
+        "under_triage_rate": 0.0,
+        "unreviewed_by_native_speaker": false
+      },
+      "minimized": {
+        "accuracy": 0.0,
+        "macro_f1": 0.0,
+        "n_cases": 13,
+        "over_triage_rate": 0.0,
+        "under_triage_rate": 0.0,
+        "unreviewed_by_native_speaker": false
+      },
+      "negation": {
+        "accuracy": 0.0,
+        "macro_f1": 0.0,
+        "n_cases": 22,
+        "over_triage_rate": 1.0,
+        "under_triage_rate": 0.0,
+        "unreviewed_by_native_speaker": false
+      },
+      "third_party": {
+        "accuracy": 0.0,
+        "macro_f1": 0.0,
+        "n_cases": 22,
+        "over_triage_rate": 1.0,
+        "under_triage_rate": 0.0,
+        "unreviewed_by_native_speaker": false
+      },
+      "typos": {
+        "accuracy": 1.0,
+        "macro_f1": 0.25,
+        "n_cases": 22,
+        "over_triage_rate": 0.0,
+        "under_triage_rate": 0.0,
+        "unreviewed_by_native_speaker": false
+      }
+    },
+    "by_specialty": {
+      "allergy_immune": {
+        "accuracy": 0.0,
+        "macro_f1": 0.0,
+        "n_cases": 17,
+        "over_triage_rate": 0.0,
+        "under_triage_rate": 0.0
+      },
+      "cardiac": {
+        "accuracy": 0.0,
+        "macro_f1": 0.0,
+        "n_cases": 18,
+        "over_triage_rate": 0.0,
+        "under_triage_rate": 0.0
+      },
+      "environmental_trauma": {
+        "accuracy": 0.2,
+        "macro_f1": 0.0833,
+        "n_cases": 34,
+        "over_triage_rate": 0.8,
+        "under_triage_rate": 0.0
+      },
+      "general_self_care": {
+        "accuracy": 0.0,
+        "macro_f1": 0.0,
+        "n_cases": 34,
+        "over_triage_rate": 0.0,
+        "under_triage_rate": 0.0
+      },
+      "genitourinary": {
+        "accuracy": 0.0,
+        "macro_f1": 0.0,
+        "n_cases": 17,
+        "over_triage_rate": 1.0,
+        "under_triage_rate": 0.0
+      },
+      "infectious_fever": {
+        "accuracy": 0.0,
+        "macro_f1": 0.0,
+        "n_cases": 34,
+        "over_triage_rate": 1.0,
+        "under_triage_rate": 0.0
+      },
+      "neuro": {
+        "accuracy": 1.0,
+        "macro_f1": 0.25,
+        "n_cases": 18,
+        "over_triage_rate": 0.0,
+        "under_triage_rate": 0.0
+      },
+      "pediatric": {
+        "accuracy": 0.0,
+        "macro_f1": 0.0,
+        "n_cases": 17,
+        "over_triage_rate": 1.0,
+        "under_triage_rate": 0.0
+      }
+    }
+  },
+  "systems": {
+    "always_level_1": {
+      "accuracy": 0.1852,
+      "accuracy_bootstrap_ci": [
+        0.0,
+        0.4579
+      ],
+      "confusion_matrix": {
+        "true_1_pred_1": 35,
+        "true_1_pred_2": 0,
+        "true_1_pred_3": 0,
+        "true_1_pred_4": 0,
+        "true_1_pred_UNCERTAIN": 0,
+        "true_2_pred_1": 52,
+        "true_2_pred_2": 0,
+        "true_2_pred_3": 0,
+        "true_2_pred_4": 0,
+        "true_2_pred_UNCERTAIN": 0,
+        "true_3_pred_1": 68,
+        "true_3_pred_2": 0,
+        "true_3_pred_3": 0,
+        "true_3_pred_4": 0,
+        "true_3_pred_UNCERTAIN": 0,
+        "true_4_pred_1": 34,
+        "true_4_pred_2": 0,
+        "true_4_pred_3": 0,
+        "true_4_pred_4": 0,
+        "true_4_pred_UNCERTAIN": 0
+      },
+      "critical_under_triage_count": 0,
+      "critical_under_triage_rate": 0.0,
+      "l12_sensitivity": 1.0,
+      "l12_sensitivity_ci": [
+        0.9577,
+        1.0
+      ],
+      "l12_specificity": 0.0,
+      "l1_sensitivity": 1.0,
+      "l1_sensitivity_ci": [
+        0.9011,
+        1.0
+      ],
+      "l1_specificity": 0.0,
+      "latency_median_ms": 0.0,
+      "latency_p95_ms": 0.0,
+      "macro_f1": 0.0781,
+      "macro_f1_bootstrap_ci": [
+        0.0,
+        0.157
+      ],
+      "mcnemar_vs_hybrid": {
+        "discordant_a": 25,
+        "discordant_b": 0,
+        "p_value": 2e-06,
+        "statistic": 23.04
+      },
+      "n_total": 189,
+      "n_valid": 189,
+      "over_triage_ci": [
+        0.7534,
+        0.8637
+      ],
+      "over_triage_count": 154,
+      "over_triage_rate": 0.8148,
+      "override_rate": 0.0,
+      "per_class": {
+        "1": {
+          "f1": 0.3125,
+          "precision": 0.1852,
+          "recall": 1.0,
+          "specificity": 0.0,
+          "support": 35
+        },
+        "2": {
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "specificity": 1.0,
+          "support": 52
+        },
+        "3": {
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "specificity": 1.0,
+          "support": 68
+        },
+        "4": {
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "specificity": 1.0,
+          "support": 34
+        }
+      },
+      "uncertain_count": 0,
+      "uncertain_rate": 0.0,
+      "under_triage_ci": [
+        0.0,
+        0.0199
+      ],
+      "under_triage_count": 0,
+      "under_triage_rate": 0.0,
+      "under_triage_severity": 0.0,
+      "weighted_f1": 0.0579
+    },
+    "hybrid": {
+      "accuracy": 0.2083,
+      "accuracy_bootstrap_ci": [
+        0.0,
+        0.6087
+      ],
+      "confusion_matrix": {
+        "true_1_pred_1": 10,
+        "true_1_pred_2": 0,
+        "true_1_pred_3": 0,
+        "true_1_pred_4": 0,
+        "true_1_pred_UNCERTAIN": 25,
+        "true_2_pred_1": 18,
+        "true_2_pred_2": 0,
+        "true_2_pred_3": 0,
+        "true_2_pred_4": 0,
+        "true_2_pred_UNCERTAIN": 34,
+        "true_3_pred_1": 8,
+        "true_3_pred_2": 2,
+        "true_3_pred_3": 0,
+        "true_3_pred_4": 0,
+        "true_3_pred_UNCERTAIN": 58,
+        "true_4_pred_1": 2,
+        "true_4_pred_2": 0,
+        "true_4_pred_3": 8,
+        "true_4_pred_4": 0,
+        "true_4_pred_UNCERTAIN": 24
+      },
+      "critical_under_triage_count": 0,
+      "critical_under_triage_rate": 0.0,
+      "l12_sensitivity": 0.3218,
+      "l12_sensitivity_ci": [
+        0.233,
+        0.4257
+      ],
+      "l12_specificity": 0.4,
+      "l1_sensitivity": 0.2857,
+      "l1_sensitivity_ci": [
+        0.1633,
+        0.4505
+      ],
+      "l1_specificity": 0.2632,
+      "latency_median_ms": 14.47,
+      "latency_p95_ms": 18.24,
+      "macro_f1": 0.1042,
+      "macro_f1_bootstrap_ci": [
+        0.0,
+        0.2083
+      ],
+      "mcnemar_vs_hybrid": {
+        "discordant_a": 0,
+        "discordant_b": 0,
+        "p_value": 1.0,
+        "statistic": 0.0
+      },
+      "n_total": 189,
+      "n_valid": 48,
+      "over_triage_ci": [
+        0.6574,
+        0.8827
+      ],
+      "over_triage_count": 38,
+      "over_triage_rate": 0.7917,
+      "override_rate": 0.1164,
+      "per_class": {
+        "1": {
+          "f1": 0.4167,
+          "precision": 0.2632,
+          "recall": 1.0,
+          "specificity": 0.2632,
+          "support": 35
+        },
+        "2": {
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "specificity": 0.9333,
+          "support": 52
+        },
+        "3": {
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "specificity": 0.7895,
+          "support": 68
+        },
+        "4": {
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "specificity": 1.0,
+          "support": 34
+        }
+      },
+      "uncertain_count": 141,
+      "uncertain_rate": 0.746,
+      "under_triage_ci": [
+        0.0,
+        0.0741
+      ],
+      "under_triage_count": 0,
+      "under_triage_rate": 0.0,
+      "under_triage_severity": 0.0,
+      "weighted_f1": 0.0772
+    },
+    "llm_only": {
+      "accuracy": 0.0,
+      "accuracy_bootstrap_ci": [
+        0.0,
+        0.0
+      ],
+      "confusion_matrix": {
+        "true_1_pred_1": 0,
+        "true_1_pred_2": 0,
+        "true_1_pred_3": 0,
+        "true_1_pred_4": 0,
+        "true_1_pred_UNCERTAIN": 35,
+        "true_2_pred_1": 0,
+        "true_2_pred_2": 0,
+        "true_2_pred_3": 0,
+        "true_2_pred_4": 0,
+        "true_2_pred_UNCERTAIN": 52,
+        "true_3_pred_1": 0,
+        "true_3_pred_2": 0,
+        "true_3_pred_3": 0,
+        "true_3_pred_4": 0,
+        "true_3_pred_UNCERTAIN": 68,
+        "true_4_pred_1": 0,
+        "true_4_pred_2": 0,
+        "true_4_pred_3": 0,
+        "true_4_pred_4": 0,
+        "true_4_pred_UNCERTAIN": 34
+      },
+      "critical_under_triage_count": 0,
+      "critical_under_triage_rate": 0.0,
+      "l12_sensitivity": 0.0,
+      "l12_sensitivity_ci": [
+        0.0,
+        0.0423
+      ],
+      "l12_specificity": 0.0,
+      "l1_sensitivity": 0.0,
+      "l1_sensitivity_ci": [
+        0.0,
+        0.0989
+      ],
+      "l1_specificity": 0.0,
+      "latency_median_ms": 10.3,
+      "latency_p95_ms": 12.93,
+      "macro_f1": 0.0,
+      "macro_f1_bootstrap_ci": [
+        0.0,
+        0.0
+      ],
+      "mcnemar_vs_hybrid": {
+        "discordant_a": 0,
+        "discordant_b": 10,
+        "p_value": 0.001953,
+        "statistic": 10.0
+      },
+      "n_total": 189,
+      "n_valid": 0,
+      "over_triage_ci": [
+        0.0,
+        0.0
+      ],
+      "over_triage_count": 0,
+      "over_triage_rate": 0.0,
+      "override_rate": 0.0,
+      "per_class": {
+        "1": {
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "specificity": 0.0,
+          "support": 35
+        },
+        "2": {
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "specificity": 0.0,
+          "support": 52
+        },
+        "3": {
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "specificity": 0.0,
+          "support": 68
+        },
+        "4": {
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "specificity": 0.0,
+          "support": 34
+        }
+      },
+      "uncertain_count": 189,
+      "uncertain_rate": 1.0,
+      "under_triage_ci": [
+        0.0,
+        0.0
+      ],
+      "under_triage_count": 0,
+      "under_triage_rate": 0.0,
+      "under_triage_severity": 0.0,
+      "weighted_f1": 0.0
+    },
+    "majority_class": {
+      "accuracy": 0.2751,
+      "accuracy_bootstrap_ci": [
+        0.0,
+        0.5503
+      ],
+      "confusion_matrix": {
+        "true_1_pred_1": 0,
+        "true_1_pred_2": 35,
+        "true_1_pred_3": 0,
+        "true_1_pred_4": 0,
+        "true_1_pred_UNCERTAIN": 0,
+        "true_2_pred_1": 0,
+        "true_2_pred_2": 52,
+        "true_2_pred_3": 0,
+        "true_2_pred_4": 0,
+        "true_2_pred_UNCERTAIN": 0,
+        "true_3_pred_1": 0,
+        "true_3_pred_2": 68,
+        "true_3_pred_3": 0,
+        "true_3_pred_4": 0,
+        "true_3_pred_UNCERTAIN": 0,
+        "true_4_pred_1": 0,
+        "true_4_pred_2": 34,
+        "true_4_pred_3": 0,
+        "true_4_pred_4": 0,
+        "true_4_pred_UNCERTAIN": 0
+      },
+      "critical_under_triage_count": 0,
+      "critical_under_triage_rate": 0.0,
+      "l12_sensitivity": 1.0,
+      "l12_sensitivity_ci": [
+        0.9577,
+        1.0
+      ],
+      "l12_specificity": 0.0,
+      "l1_sensitivity": 0.0,
+      "l1_sensitivity_ci": [
+        0.0,
+        0.0989
+      ],
+      "l1_specificity": 1.0,
+      "latency_median_ms": 0.0,
+      "latency_p95_ms": 0.0,
+      "macro_f1": 0.1079,
+      "macro_f1_bootstrap_ci": [
+        0.0,
+        0.1775
+      ],
+      "mcnemar_vs_hybrid": {
+        "discordant_a": 52,
+        "discordant_b": 10,
+        "p_value": 0.0,
+        "statistic": 27.1129
+      },
+      "n_total": 189,
+      "n_valid": 189,
+      "over_triage_ci": [
+        0.4685,
+        0.6092
+      ],
+      "over_triage_count": 102,
+      "over_triage_rate": 0.5397,
+      "override_rate": 0.0,
+      "per_class": {
+        "1": {
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "specificity": 1.0,
+          "support": 35
+        },
+        "2": {
+          "f1": 0.4315,
+          "precision": 0.2751,
+          "recall": 1.0,
+          "specificity": 0.0,
+          "support": 52
+        },
+        "3": {
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "specificity": 1.0,
+          "support": 68
+        },
+        "4": {
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "specificity": 1.0,
+          "support": 34
+        }
+      },
+      "uncertain_count": 0,
+      "uncertain_rate": 0.0,
+      "under_triage_ci": [
+        0.1363,
+        0.2466
+      ],
+      "under_triage_count": 35,
+      "under_triage_rate": 0.1852,
+      "under_triage_severity": 1.0,
+      "weighted_f1": 0.1187
+    },
+    "ml_only": {
+      "accuracy": 0.0,
+      "accuracy_bootstrap_ci": [
+        0.0,
+        0.0
+      ],
+      "confusion_matrix": {
+        "true_1_pred_1": 0,
+        "true_1_pred_2": 0,
+        "true_1_pred_3": 0,
+        "true_1_pred_4": 0,
+        "true_1_pred_UNCERTAIN": 35,
+        "true_2_pred_1": 0,
+        "true_2_pred_2": 0,
+        "true_2_pred_3": 0,
+        "true_2_pred_4": 0,
+        "true_2_pred_UNCERTAIN": 52,
+        "true_3_pred_1": 0,
+        "true_3_pred_2": 0,
+        "true_3_pred_3": 0,
+        "true_3_pred_4": 0,
+        "true_3_pred_UNCERTAIN": 68,
+        "true_4_pred_1": 0,
+        "true_4_pred_2": 0,
+        "true_4_pred_3": 0,
+        "true_4_pred_4": 0,
+        "true_4_pred_UNCERTAIN": 34
+      },
+      "critical_under_triage_count": 0,
+      "critical_under_triage_rate": 0.0,
+      "l12_sensitivity": 0.0,
+      "l12_sensitivity_ci": [
+        0.0,
+        0.0423
+      ],
+      "l12_specificity": 0.0,
+      "l1_sensitivity": 0.0,
+      "l1_sensitivity_ci": [
+        0.0,
+        0.0989
+      ],
+      "l1_specificity": 0.0,
+      "latency_median_ms": 10.17,
+      "latency_p95_ms": 13.11,
+      "macro_f1": 0.0,
+      "macro_f1_bootstrap_ci": [
+        0.0,
+        0.0
+      ],
+      "mcnemar_vs_hybrid": {
+        "discordant_a": 0,
+        "discordant_b": 10,
+        "p_value": 0.001953,
+        "statistic": 10.0
+      },
+      "n_total": 189,
+      "n_valid": 0,
+      "over_triage_ci": [
+        0.0,
+        0.0
+      ],
+      "over_triage_count": 0,
+      "over_triage_rate": 0.0,
+      "override_rate": 0.0,
+      "per_class": {
+        "1": {
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "specificity": 0.0,
+          "support": 35
+        },
+        "2": {
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "specificity": 0.0,
+          "support": 52
+        },
+        "3": {
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "specificity": 0.0,
+          "support": 68
+        },
+        "4": {
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "specificity": 0.0,
+          "support": 34
+        }
+      },
+      "uncertain_count": 189,
+      "uncertain_rate": 1.0,
+      "under_triage_ci": [
+        0.0,
+        0.0
+      ],
+      "under_triage_count": 0,
+      "under_triage_rate": 0.0,
+      "under_triage_severity": 0.0,
+      "weighted_f1": 0.0
+    },
+    "rule_only": {
+      "accuracy": 0.4583,
+      "accuracy_bootstrap_ci": [
+        0.125,
+        0.8333
+      ],
+      "confusion_matrix": {
+        "true_1_pred_1": 8,
+        "true_1_pred_2": 0,
+        "true_1_pred_3": 2,
+        "true_1_pred_4": 0,
+        "true_1_pred_UNCERTAIN": 25,
+        "true_2_pred_1": 10,
+        "true_2_pred_2": 8,
+        "true_2_pred_3": 0,
+        "true_2_pred_4": 0,
+        "true_2_pred_UNCERTAIN": 34,
+        "true_3_pred_1": 4,
+        "true_3_pred_2": 0,
+        "true_3_pred_3": 6,
+        "true_3_pred_4": 0,
+        "true_3_pred_UNCERTAIN": 58,
+        "true_4_pred_1": 0,
+        "true_4_pred_2": 0,
+        "true_4_pred_3": 10,
+        "true_4_pred_4": 0,
+        "true_4_pred_UNCERTAIN": 24
+      },
+      "critical_under_triage_count": 2,
+      "critical_under_triage_rate": 0.0571,
+      "l12_sensitivity": 0.2989,
+      "l12_sensitivity_ci": [
+        0.2128,
+        0.4019
+      ],
+      "l12_specificity": 0.8,
+      "l1_sensitivity": 0.2286,
+      "l1_sensitivity_ci": [
+        0.1207,
+        0.3902
+      ],
+      "l1_specificity": 0.6316,
+      "latency_median_ms": 8.35,
+      "latency_p95_ms": 10.41,
+      "macro_f1": 0.386,
+      "macro_f1_bootstrap_ci": [
+        0.087,
+        0.6042
+      ],
+      "mcnemar_vs_hybrid": {
+        "discordant_a": 14,
+        "discordant_b": 2,
+        "p_value": 0.004181,
+        "statistic": 9.0
+      },
+      "n_total": 189,
+      "n_valid": 48,
+      "over_triage_ci": [
+        0.3639,
+        0.6361
+      ],
+      "over_triage_count": 24,
+      "over_triage_rate": 0.5,
+      "override_rate": 0.0,
+      "per_class": {
+        "1": {
+          "f1": 0.5,
+          "precision": 0.3636,
+          "recall": 0.8,
+          "specificity": 0.6316,
+          "support": 35
+        },
+        "2": {
+          "f1": 0.6154,
+          "precision": 1.0,
+          "recall": 0.4444,
+          "specificity": 1.0,
+          "support": 52
+        },
+        "3": {
+          "f1": 0.4286,
+          "precision": 0.3333,
+          "recall": 0.6,
+          "specificity": 0.6842,
+          "support": 68
+        },
+        "4": {
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "specificity": 1.0,
+          "support": 34
+        }
+      },
+      "uncertain_count": 141,
+      "uncertain_rate": 0.746,
+      "under_triage_ci": [
+        0.0115,
+        0.1398
+      ],
+      "under_triage_count": 2,
+      "under_triage_rate": 0.0417,
+      "under_triage_severity": 2.0,
+      "weighted_f1": 0.4161
+    }
+  },
+  "tuning": {
+    "best_C": 5.0,
+    "best_val_macro_f1": 0.3377,
+    "model_version_hash": "6b305cb08c9d2242",
+    "tuning_grid": [
+      {
+        "C": 0.1,
+        "val_accuracy": 0.3393,
+        "val_macro_f1": 0.3247
+      },
+      {
+        "C": 0.5,
+        "val_accuracy": 0.3304,
+        "val_macro_f1": 0.3082
+      },
+      {
+        "C": 1.0,
+        "val_accuracy": 0.3304,
+        "val_macro_f1": 0.3082
+      },
+      {
+        "C": 2.0,
+        "val_accuracy": 0.3482,
+        "val_macro_f1": 0.3253
+      },
+      {
+        "C": 5.0,
+        "val_accuracy": 0.3616,
+        "val_macro_f1": 0.3377
+      },
+      {
+        "C": 10.0,
+        "val_accuracy": 0.3616,
+        "val_macro_f1": 0.3377
+      }
+    ]
+  }
+}

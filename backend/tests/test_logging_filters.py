@@ -1,6 +1,5 @@
 """Tests for sensitive data filtering and logger redaction."""
 
-import io
 import logging
 
 from app.core.logging_filters import SensitiveDataFilter, configure_safe_logging

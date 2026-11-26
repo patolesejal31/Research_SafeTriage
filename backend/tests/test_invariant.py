@@ -10,15 +10,12 @@ from hypothesis import given, settings
 from hypothesis import strategies as st
 import pytest
 
-from app.core.logging_filters import SensitiveDataFilter, configure_safe_logging
-from app.core.urgency import UNCERTAIN, UncertainType, Urgency
+from app.core.logging_filters import SensitiveDataFilter
+from app.core.urgency import UNCERTAIN, Urgency
 from app.triage.invariant import (
-    INVARIANT_VERSION,
-    AuditRecord,
     ComponentResult,
     ComponentStatus,
     ComponentType,
-    InvariantResult,
     enforce_invariant,
 )
 
@@ -282,7 +279,7 @@ class TestPlantedSecretLogCapture:
         log_stream = io.StringIO()
         handler = logging.StreamHandler(log_stream)
         handler.addFilter(SensitiveDataFilter())
-        
+
         test_logger = logging.getLogger("safetriage.test.redaction")
         test_logger.setLevel(logging.INFO)
         test_logger.addHandler(handler)
@@ -303,7 +300,7 @@ class TestPlantedSecretLogCapture:
         """Audit record representation never contains planted secret."""
         rule_res = ComponentResult(ComponentType.RULE, ComponentStatus.OK, Urgency.EMERGENCY)
         result = enforce_invariant(rule_res, assessment_id="valid-id-only")
-        
+
         rec_repr = str(asdict(result.audit_record))
         assert "SECRET_SYMPTOM_XYZ" not in rec_repr
 

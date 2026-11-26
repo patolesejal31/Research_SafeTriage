@@ -32,13 +32,13 @@ from __future__ import annotations
 
 import logging
 from dataclasses import dataclass, field
-from typing import Any, Dict, List, Optional
+from typing import Any, List, Optional
 
 from app.core.urgency import UNCERTAIN, Urgency, UrgencyOrUncertain
 from app.services.explainer import ExplanationResult, Explainer
-from app.services.llm_adapter import LLMProvider, MockProvider, get_provider
-from app.services.ml_baseline import MLBaseline, MLPrediction, _extract_feature_string
-from app.triage.engine import ClinicalRule, RuleEngine, RuleEngineResult
+from app.services.llm_adapter import LLMProvider, MockProvider
+from app.services.ml_baseline import MLBaseline, MLPrediction
+from app.triage.engine import RuleEngine, RuleEngineResult
 from app.triage.followups import FollowUpAnswer, FollowUpEngine, FollowUpQuestion
 from app.triage.invariant import (
     ComponentResult,

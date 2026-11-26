@@ -1,7 +1,7 @@
 """Assessment schemas for triage requests and responses."""
 
 from datetime import datetime
-from typing import Any, Dict, List, Optional
+from typing import List, Optional
 from pydantic import BaseModel, ConfigDict, Field
 
 
@@ -53,6 +53,7 @@ class AssessmentCreateRequest(BaseModel):
 
 class AssessmentResponse(BaseModel):
     id: str
+    assessment_id: Optional[str] = None
     created_at: datetime
     final_urgency: Optional[int] = None
     is_uncertain: bool
@@ -95,6 +96,7 @@ class AssessmentResponse(BaseModel):
 
 class AssessmentSummaryResponse(BaseModel):
     id: str
+    assessment_id: Optional[str] = None
     created_at: datetime
     final_urgency: Optional[int] = None
     is_uncertain: bool

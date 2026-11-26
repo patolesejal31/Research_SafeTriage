@@ -238,6 +238,7 @@ def create_assessment(
 
     return AssessmentResponse(
         id=db_assessment.id,
+        assessment_id=db_assessment.id,
         created_at=db_assessment.created_at,
         final_urgency=db_assessment.final_urgency,
         is_uncertain=db_assessment.is_uncertain,
@@ -296,6 +297,7 @@ def list_assessments(
     return [
         AssessmentSummaryResponse(
             id=a.id,
+            assessment_id=a.id,
             created_at=a.created_at,
             final_urgency=a.final_urgency,
             is_uncertain=a.is_uncertain,
@@ -351,6 +353,7 @@ def get_assessment(
 
     return AssessmentResponse(
         id=assessment.id,
+        assessment_id=assessment.id,
         created_at=assessment.created_at,
         final_urgency=assessment.final_urgency,
         is_uncertain=assessment.is_uncertain,
@@ -374,6 +377,58 @@ def get_assessment(
         rule_triggers=rule_schemas,
         followup_questions=[],
         skipped_followup_questions=[],
+    )
+
+
+@router.post(
+    "/{assessment_id}/followups",
+    response_model=AssessmentResponse,
+    summary="Submit answers to follow-up questions for this assessment",
+)
+def submit_assessment_followups(
+    assessment_id: str,
+    req: dict,
+    x_session_id: Optional[str] = Header(None, alias="X-Session-ID"),
+    current_user: Optional[User] = Depends(get_current_user_optional),
+    db: Session = Depends(get_db),
+):
+    """Bridge endpoint for submitting followups under /assessments/{assessment_id}/followups."""
+    from app.api.v1.followups import submit_followups
+    from app.schemas.assessment import FollowUpSubmitRequest, FollowUpAnswerInput
+
+    # Handle both {answers: [...]} and raw array
+    raw_answers = req.get("answers", []) if isinstance(req, dict) else req
+    typed_answers = []
+    for item in raw_answers:
+        if isinstance(item, dict):
+            qid = item.get("question_id", "")
+            val = item.get("answer_value")
+            sel_opt = item.get("selected_option")
+            num_val = item.get("numeric_value")
+
+            if sel_opt is None and num_val is None and val is not None:
+                if isinstance(val, (int, float)) and not isinstance(val, bool):
+                    num_val = float(val)
+                elif isinstance(val, bool):
+                    sel_opt = "Yes" if val else "No"
+                else:
+                    sel_opt = str(val)
+
+            typed_answers.append(
+                FollowUpAnswerInput(
+                    question_id=qid,
+                    selected_option=sel_opt,
+                    numeric_value=num_val,
+                )
+            )
+
+    submit_req = FollowUpSubmitRequest(answers=typed_answers)
+    return submit_followups(
+        req=submit_req,
+        assessment_id=assessment_id,
+        x_session_id=x_session_id,
+        current_user=current_user,
+        db=db,
     )
 
 

@@ -72,7 +72,7 @@ def _extract_feature_string(extraction: ExtractionResult) -> str:
     if extraction.attributes.severity:
         parts.append(f"SEV_{extraction.attributes.severity}")
     if extraction.attributes.duration:
-        parts.append(f"DUR_present")
+        parts.append("DUR_present")
     for mod in extraction.attributes.modifiers:
         parts.append(f"MOD_{mod}")
 
@@ -185,6 +185,7 @@ class MLBaseline:
         feature_strings: List[str],
         labels: List[int],
         save_path: Optional[Path] = None,
+        C: float = 1.0,
     ) -> str:
         """Train the TF-IDF + Logistic Regression model.
 
@@ -192,6 +193,7 @@ class MLBaseline:
             feature_strings: Structured feature strings (from _extract_feature_string).
             labels: Integer urgency labels (1-4).
             save_path: Where to save the trained model bundle.
+            C: Regularization parameter for Logistic Regression.
 
         Returns:
             SHA-256 version hash of the saved model.
@@ -202,7 +204,7 @@ class MLBaseline:
         from sklearn.feature_extraction.text import TfidfVectorizer
         from sklearn.linear_model import LogisticRegression
 
-        invalid_labels = [l for l in labels if l not in (1, 2, 3, 4)]
+        invalid_labels = [lbl for lbl in labels if lbl not in (1, 2, 3, 4)]
         if invalid_labels:
             raise ValueError(f"Labels must be 1-4; found invalid: {invalid_labels}")
 
@@ -215,7 +217,7 @@ class MLBaseline:
         X = vectorizer.fit_transform(feature_strings)
         model = LogisticRegression(
             max_iter=1000,
-            C=1.0,
+            C=C,
             solver="lbfgs",
             random_state=42,
         )

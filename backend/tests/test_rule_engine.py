@@ -4,8 +4,8 @@ from pathlib import Path
 import pytest
 
 from app.core.urgency import Urgency
-from app.triage.engine import ClinicalRule, RuleEngine, RuleEngineResult
-from app.triage.invariant import ComponentStatus, ComponentType
+from app.triage.engine import RuleEngine
+from app.triage.invariant import ComponentStatus
 from app.triage.nlp_extractor import NLPExtractor
 
 

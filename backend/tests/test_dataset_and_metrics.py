@@ -31,16 +31,14 @@ from __future__ import annotations
 
 import hashlib
 import json
-import os
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any, Dict, List, Set
 
 import pytest
-from sqlalchemy import create_engine, event, select
+from sqlalchemy import create_engine, event
 from sqlalchemy.orm import Session
 
-from app.core.config import settings
 from app.db.base import Base
 from app.db.models import (
     Assessment,
